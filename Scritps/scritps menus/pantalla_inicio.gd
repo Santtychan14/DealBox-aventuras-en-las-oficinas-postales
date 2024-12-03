@@ -14,3 +14,15 @@ func presentacion():
 	tween.tween_property($"Color_presentación/texto_presentación","modulate",Color.TRANSPARENT,2)
 	# aqui podria poner un script para que inicie una musica
 	tween.tween_property($"Color_presentación","position",Vector2(0,-300),1)
+
+
+func _on_exit_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_setting_pressed() -> void:
+	pass # Replace with function body.

@@ -1,6 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://6poq2wks55ll"]
+[gd_scene load_steps=11 format=3 uid="uid://6poq2wks55ll"]
 
-[ext_resource type="Script" path="res://Scritps/pantalla_inicio.gd" id="1_wcr3e"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/pantalla_inicio.gd" id="1_wcr3e"]
+[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://recursos/Fonts/PixelOperator8.ttf" id="2_jnnsb"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/button.gd" id="2_ow18k"]
+[ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://recursos/Fonts/PixelOperator8-Bold.ttf" id="2_x4eus"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/ButtonSetting.gd" id="6_ufx7n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wshs"]
+bg_color = Color(0, 0, 0, 0.643137)
 
 [sub_resource type="Animation" id="Animation_3mmqi"]
 length = 0.001
@@ -57,17 +64,30 @@ script = ExtResource("1_wcr3e")
 layout_mode = 0
 offset_top = 159.0
 offset_right = 480.0
-offset_bottom = 171.0
-color = Color(0.18359, 0.18359, 0.18359, 1)
+offset_bottom = 191.0
+color = Color(1, 1, 1, 0)
 
-[node name="texto" type="Label" parent="boton?_ni_idea_que_sea"]
+[node name="Play" type="Button" parent="boton?_ni_idea_que_sea"]
 layout_mode = 0
-offset_left = 176.0
-offset_top = -2.0
-offset_right = 307.0
-offset_bottom = 12.0
-theme_override_font_sizes/font_size = 10
-text = "pulsa space para continuar"
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 480.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("2_jnnsb")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wshs")
+text = "Jugar"
+script = ExtResource("2_ow18k")
+
+[node name="Setting" type="Button" parent="boton?_ni_idea_que_sea"]
+layout_mode = 0
+offset_left = 341.0
+offset_top = -148.0
+offset_right = 397.0
+offset_bottom = -124.0
+theme_override_fonts/font = ExtResource("2_x4eus")
+text = "opc"
+script = ExtResource("6_ufx7n")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -90,3 +110,9 @@ offset_top = 121.0
 offset_right = 272.0
 offset_bottom = 144.0
 text = "creado por"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(240, 119)
+
+[connection signal="pressed" from="boton?_ni_idea_que_sea/Play" to="boton?_ni_idea_que_sea/Play" method="_on_pressed"]
+[connection signal="pressed" from="boton?_ni_idea_que_sea/Setting" to="boton?_ni_idea_que_sea/Setting" method="_on_pressed"]
