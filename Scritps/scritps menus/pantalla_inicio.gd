@@ -23,6 +23,9 @@ func _on_exit_pressed() -> void:
 func _on_button_pressed() -> void:
 	pass # Replace with function body.
 
+func _on_play_pressed() -> void:
+	get_tree().change_scene_to_file("res://Escenas/prototipo de niveles/nivel_prototipo.tscn")
 
-func _on_setting_pressed() -> void:
-	pass # Replace with function body.
+
+func _on_settings_pressed() -> void:
+	get_tree().change_scene_to_file("res://Escenas/menus/menu_opciones.tscn")

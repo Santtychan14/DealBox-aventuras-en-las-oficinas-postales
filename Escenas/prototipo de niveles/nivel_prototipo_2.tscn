@@ -257,13 +257,13 @@ shape = SubResource("RectangleShape2D_dybdu")
 position = Vector2(107, 275)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(1.233, 1.233)
-limit_left = 0
-limit_right = 1105
+position = Vector2(-5, -13)
+process_callback = 0
+limit_left = 1
+limit_right = 840
 limit_bottom = 342
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
-rotation_smoothing_enabled = true
 
 [node name="Coins" parent="." instance=ExtResource("10_j83yr")]
 position = Vector2(495.136, 236.358)

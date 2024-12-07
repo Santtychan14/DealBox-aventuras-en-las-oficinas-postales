@@ -193,7 +193,7 @@ text = "=>"
 position = Vector2(59.2961, 249.059)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(1.233, 1.233)
+position = Vector2(-5, -13)
 process_callback = 0
 limit_left = 1
 limit_right = 840
