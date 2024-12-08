@@ -227,7 +227,7 @@ size = Vector2(44, 6)
 distance = -38.2088
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlciy"]
-size = Vector2(6.37439, 71)
+size = Vector2(13, 74.5)
 
 [node name="nivel prototipo 2" type="Node2D"]
 
@@ -309,11 +309,11 @@ theme_override_font_sizes/font_size = 30
 text = "Zona 2"
 
 [node name="Cambio de zona left" parent="." instance=ExtResource("12_cu8g6")]
-position = Vector2(1106.37, 255.385)
+position = Vector2(1105, 262)
 script = ExtResource("13_t5jie")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cambio de zona left"]
-position = Vector2(13.8129, -2.8851)
+position = Vector2(13.5, -9.75)
 shape = SubResource("RectangleShape2D_hlciy")
 
 [connection signal="body_entered" from="Cambio de zona Right" to="Cambio de zona Right" method="_on_body_entered"]

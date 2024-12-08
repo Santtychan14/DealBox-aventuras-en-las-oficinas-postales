@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bjpg2m52io72v"]
+[gd_scene load_steps=13 format=3 uid="uid://cl5j8hkvork42"]
 
 [ext_resource type="Shader" path="res://Scritps/scroll.gdshader" id="1_i0foj"]
 [ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="2_6s7q3"]

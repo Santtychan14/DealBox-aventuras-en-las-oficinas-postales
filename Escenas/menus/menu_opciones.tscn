@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://b7kw1gmb1habr"]
+[gd_scene load_steps=19 format=3 uid="uid://c32oqc32j6l1f"]
 
-[ext_resource type="Theme" uid="uid://ck7m0sj2y52kb" path="res://UI_theme.tres" id="1_ugm6h"]
-[ext_resource type="PackedScene" uid="uid://bjpg2m52io72v" path="res://Escenas/menu_bg.tscn" id="2_xcbw6"]
+[ext_resource type="Theme" uid="uid://c3w4bot3r237h" path="res://UI_theme.tres" id="1_ugm6h"]
+[ext_resource type="PackedScene" uid="uid://cl5j8hkvork42" path="res://Escenas/menu_bg.tscn" id="2_xcbw6"]
 [ext_resource type="Script" path="res://Escenas/volume_button.gd" id="4_ppm6y"]
 [ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="4_y4eam"]
 [ext_resource type="Texture2D" uid="uid://b6mf3m38t3xgm" path="res://recursos/Sprites/UI/icon_volume_off.png" id="5_8fi25"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cnm0d8qn3sbbe" path="res://recursos/Sprites/UI/volume_bar_on.png" id="8_x3u32"]
 [ext_resource type="AudioStream" uid="uid://btw0vjsqt8k13" path="res://recursos/Sounds/open.wav" id="9_41mhe"]
 [ext_resource type="AudioStream" uid="uid://c4su6sq0hygds" path="res://recursos/Sounds/add.wav" id="9_at40m"]
-[ext_resource type="Script" path="res://back.gd" id="11_ttca8"]
+[ext_resource type="Script" path="res://Scritps/back.gd" id="11_tnnsx"]
 
 [sub_resource type="Animation" id="Animation_3mmqi"]
 length = 0.001
@@ -330,7 +330,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_lpbsf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qlv4x")
 theme_override_styles/normal = SubResource("StyleBoxFlat_y0ro8")
 text = "<"
-script = ExtResource("11_ttca8")
+script = ExtResource("11_tnnsx")
 
 [connection signal="pressed" from="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music" to="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music" method="_on_pressed"]
 [connection signal="pressed" from="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music/card/VBoxContainer/HBoxContainer/minus" to="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music" method="_on_minus_pressed"]

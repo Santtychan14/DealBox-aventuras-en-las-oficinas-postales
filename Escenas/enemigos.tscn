@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0ipcyotlxng2"]
+
+[ext_resource type="Script" path="res://Escenas/character_body_2d.gd" id="1_nrjax"]
+[ext_resource type="Texture2D" uid="uid://byojeapujk77x" path="res://recursos/Sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png" id="2_l86yy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72h6j"]
+size = Vector2(14.5, 18.5)
+
+[node name="Enemigo" type="Area2D"]
+script = ExtResource("1_nrjax")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("2_l86yy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0.25)
+shape = SubResource("RectangleShape2D_72h6j")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

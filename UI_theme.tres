@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://ck7m0sj2y52kb"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://c3w4bot3r237h"]
 
 [ext_resource type="Texture2D" uid="uid://drbvx23g7pg56" path="res://recursos/Sprites/UI/button_normal.png" id="1_7c74y"]
 [ext_resource type="Texture2D" uid="uid://dws20lki43s5b" path="res://recursos/Sprites/UI/button_disabled.png" id="1_758o2"]
