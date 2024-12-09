@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://basy2y520hiom"]
+[gd_scene load_steps=21 format=4 uid="uid://basy2y520hiom"]
 
 [ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/vacio.tscn" id="1_dpd6i"]
 [ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="1_ng5ql"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dfjh4dt5rfwa8" path="res://Escenas/cambio de zonas/cambio_de_zona_right.tscn" id="5_whqwm"]
 [ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/player.tscn" id="7_6rqua"]
 [ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zonas Right/cambio_zona_3_a_2_nivel1.gd" id="8_5orok"]
+[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://recursos/Sprites/UI/hearth.png" id="9_nn2la"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="10_rndgv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1xh0q"]
 
@@ -253,5 +255,47 @@ script = ExtResource("8_5orok")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cambio de zona Right"]
 position = Vector2(-7.12764, -4.25531)
 shape = SubResource("RectangleShape2D_ia23g")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="empty_hearths" type="TextureRect" parent="UI"]
+modulate = Color(0.122252, 0.122252, 0.122252, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -278.0
+offset_bottom = -163.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("9_nn2la")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="hearths" type="TextureRect" parent="UI"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 45.0
+offset_bottom = 17.0
+size_flags_horizontal = 3
+texture = ExtResource("9_nn2la")
+expand_mode = 1
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="bg" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/bg"]
+custom_minimum_size = Vector2(320, 180)
+offset_right = 863.0
+offset_bottom = 361.0
+texture = ExtResource("10_rndgv")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Cambio de zona Right" to="Cambio de zona Right" method="_on_body_entered"]

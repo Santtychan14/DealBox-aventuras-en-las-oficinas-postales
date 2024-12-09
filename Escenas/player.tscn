@@ -19,15 +19,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy5ac"]
-size = Vector2(12, 13)
+size = Vector2(12, 12)
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
-collision_layer = 2
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 3
 script = ExtResource("1_oenvx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cr0ym")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5.5)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_hy5ac")

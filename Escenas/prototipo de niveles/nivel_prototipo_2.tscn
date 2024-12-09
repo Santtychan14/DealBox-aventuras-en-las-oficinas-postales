@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://chunn8ca5101a"]
+[gd_scene load_steps=29 format=4 uid="uid://chunn8ca5101a"]
 
 [ext_resource type="PackedScene" uid="uid://dfjh4dt5rfwa8" path="res://Escenas/cambio de zonas/cambio_de_zona_right.tscn" id="1_xjm53"]
 [ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zonas Right/cambio_zona_2_a_1_nivel1.gd" id="2_6j4g3"]
@@ -13,6 +13,8 @@
 [ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://recursos/Fonts/PixelOperator8-Bold.ttf" id="11_unmqj"]
 [ext_resource type="PackedScene" uid="uid://chrw7kpvwxbis" path="res://Escenas/cambio de zonas/cambio_de_zona_left.tscn" id="12_cu8g6"]
 [ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zona Left/cambio_zona_2_a_3_nivel1l.gd" id="13_t5jie"]
+[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://recursos/Sprites/UI/hearth.png" id="14_3lfjn"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="15_vcefw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x13kc"]
 texture = ExtResource("6_hbbun")
@@ -315,6 +317,48 @@ script = ExtResource("13_t5jie")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cambio de zona left"]
 position = Vector2(13.5, -9.75)
 shape = SubResource("RectangleShape2D_hlciy")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="empty_hearths" type="TextureRect" parent="UI"]
+modulate = Color(0.122252, 0.122252, 0.122252, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -278.0
+offset_bottom = -163.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("14_3lfjn")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="hearths" type="TextureRect" parent="UI"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 45.0
+offset_bottom = 17.0
+size_flags_horizontal = 3
+texture = ExtResource("14_3lfjn")
+expand_mode = 1
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="bg" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/bg"]
+custom_minimum_size = Vector2(320, 180)
+offset_left = -36.0
+offset_right = 1309.0
+offset_bottom = 361.0
+texture = ExtResource("15_vcefw")
+stretch_mode = 1
 
 [connection signal="body_entered" from="Cambio de zona Right" to="Cambio de zona Right" method="_on_body_entered"]
 [connection signal="body_entered" from="Cambio de zona left" to="Cambio de zona left" method="_on_body_entered"]
