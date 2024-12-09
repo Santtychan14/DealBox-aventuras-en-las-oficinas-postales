@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://cl5j8hkvork42"]
 
-[ext_resource type="Shader" path="res://Scritps/scroll.gdshader" id="1_i0foj"]
-[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="2_6s7q3"]
-[ext_resource type="Texture2D" uid="uid://dgct1r3vju7tt" path="res://recursos/Sprites/Fondo/boxes_bg.png" id="3_kfjsg"]
-[ext_resource type="Texture2D" uid="uid://cuaqvdgw2216o" path="res://recursos/Sprites/Fondo/boxes.png" id="4_o5tc6"]
-[ext_resource type="Texture2D" uid="uid://b4i4vvucfjd1f" path="res://recursos/Sprites/Fondo/lights.png" id="5_xgjay"]
-[ext_resource type="Texture2D" uid="uid://8kdjt8wquig" path="res://recursos/Sprites/595FAD8C-E33F-4E12-A974-9B2D043A2BA3.png.eac9bd8cac80378692e4115553790af8.png" id="6_aq5l5"]
+[ext_resource type="Shader" path="res://Shaders/scroll.gdshader" id="1_i0foj"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://Recursos/sprites/Fondo/bg.png" id="2_6s7q3"]
+[ext_resource type="Texture2D" uid="uid://dgct1r3vju7tt" path="res://Recursos/sprites/Fondo/boxes_bg.png" id="3_kfjsg"]
+[ext_resource type="Texture2D" uid="uid://cuaqvdgw2216o" path="res://Recursos/sprites/Fondo/boxes.png" id="4_o5tc6"]
+[ext_resource type="Texture2D" uid="uid://b4i4vvucfjd1f" path="res://Recursos/sprites/Fondo/lights.png" id="5_xgjay"]
+[ext_resource type="Texture2D" uid="uid://8kdjt8wquig" path="res://Recursos/sprites/595FAD8C-E33F-4E12-A974-9B2D043A2BA3.png.eac9bd8cac80378692e4115553790af8.png" id="6_aq5l5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t2d2l"]
 shader = ExtResource("1_i0foj")

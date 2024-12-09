@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b00kdafgm2g4j"]
 
-[ext_resource type="Texture2D" uid="uid://byojeapujk77x" path="res://recursos/Sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png" id="1_01fsl"]
+[ext_resource type="Texture2D" uid="uid://byojeapujk77x" path="res://Recursos/sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png" id="1_01fsl"]
 [ext_resource type="Script" path="res://Scritps/player.gd" id="1_oenvx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_em74i"]

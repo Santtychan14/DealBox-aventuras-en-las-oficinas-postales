@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scritps/scritps menus/pantalla_inicio.gd" id="1_akiv7"]
 [ext_resource type="Script" path="res://Scritps/scritps menus/exit_menu.gd" id="2_8kb1c"]
-[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://recursos/Fonts/PixelOperator8.ttf" id="2_ay8l1"]
+[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://Recursos/fonts/PixelOperator8.ttf" id="2_ay8l1"]
 [ext_resource type="Script" path="res://Scritps/scritps menus/button.gd" id="3_fk30m"]
-[ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://recursos/Fonts/PixelOperator8-Bold.ttf" id="4_mwnco"]
+[ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://Recursos/fonts/PixelOperator8-Bold.ttf" id="4_mwnco"]
 [ext_resource type="Script" path="res://Scritps/scritps menus/ButtonExit.gd" id="5_3gjwk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wshs"]

@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 160.0
 const JUMP_VELOCITY = -260.0
 var life = 3
+var puntuaje = 0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
@@ -33,4 +34,17 @@ func _physics_process(delta: float) -> void:
 
 func lose_hearth():
 	$"../UI/hearths".size.x -= 14
+	
+func puntos():
+	puntuaje += 1
+	$"../UI/Puntos".text = str(puntuaje)
+	
+
+
+	
+	
+	
+
+
+	
 	

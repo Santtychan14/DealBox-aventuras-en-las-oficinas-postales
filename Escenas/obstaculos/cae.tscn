@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cky7rihhp8e0t"]
 
-[ext_resource type="Texture2D" uid="uid://da6j7s6131p83" path="res://recursos/Sprites/bloque que cae prototipo v1 0.png" id="1_dm3rx"]
-[ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/vacio.tscn" id="2_1vp8o"]
+[ext_resource type="Texture2D" uid="uid://da6j7s6131p83" path="res://Recursos/sprites/bloque que cae prototipo v1 0.png" id="1_dm3rx"]
+[ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/obstaculos/vacio.tscn" id="2_1vp8o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g8o35"]
 size = Vector2(32, 28)

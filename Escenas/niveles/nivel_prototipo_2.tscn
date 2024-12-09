@@ -1,23 +1,24 @@
-[gd_scene load_steps=29 format=4 uid="uid://chunn8ca5101a"]
+[gd_scene load_steps=31 format=4 uid="uid://chunn8ca5101a"]
 
-[ext_resource type="PackedScene" uid="uid://dfjh4dt5rfwa8" path="res://Escenas/cambio de zonas/cambio_de_zona_right.tscn" id="1_xjm53"]
-[ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zonas Right/cambio_zona_2_a_1_nivel1.gd" id="2_6j4g3"]
-[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://recursos/Sprites/tileset_metal.png" id="3_2dugb"]
-[ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/player.tscn" id="3_6qt2m"]
-[ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/vacio.tscn" id="4_aswsw"]
-[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://recursos/Sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="5_ioqi1"]
-[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="6_hbbun"]
-[ext_resource type="Texture2D" uid="uid://dkcwkml6f4uog" path="res://recursos/Sprites/charcos de agua 24x24 prototipo Sprite-0001.png" id="7_i73tp"]
-[ext_resource type="PackedScene" uid="uid://ff3l3otwmdsq" path="res://Escenas/obstaculos/jump_pad.tscn" id="7_rhd85"]
-[ext_resource type="PackedScene" uid="uid://btqt662w01j4j" path="res://Escenas/coins.tscn" id="10_j83yr"]
-[ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://recursos/Fonts/PixelOperator8-Bold.ttf" id="11_unmqj"]
-[ext_resource type="PackedScene" uid="uid://chrw7kpvwxbis" path="res://Escenas/cambio de zonas/cambio_de_zona_left.tscn" id="12_cu8g6"]
-[ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zona Left/cambio_zona_2_a_3_nivel1l.gd" id="13_t5jie"]
-[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://recursos/Sprites/UI/hearth.png" id="14_3lfjn"]
-[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="15_vcefw"]
+[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://Recursos/sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="1_bg6n4"]
+[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://Recursos/sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="2_4py50"]
+[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://Recursos/sprites/tileset_metal.png" id="3_ni7c1"]
+[ext_resource type="Texture2D" uid="uid://dkcwkml6f4uog" path="res://Recursos/sprites/charcos de agua 24x24 prototipo Sprite-0001.png" id="4_2g2ra"]
+[ext_resource type="PackedScene" uid="uid://dfjh4dt5rfwa8" path="res://Escenas/cambio de zonas/cambio_de_zona_right.tscn" id="5_2enxs"]
+[ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zonas Right/cambio_zona_2_a_1_nivel1.gd" id="6_qlqdr"]
+[ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/niveles/player.tscn" id="7_htdy0"]
+[ext_resource type="PackedScene" uid="uid://btqt662w01j4j" path="res://Escenas/obstaculos/coins.tscn" id="8_lgtej"]
+[ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/obstaculos/vacio.tscn" id="9_kslwg"]
+[ext_resource type="PackedScene" uid="uid://ff3l3otwmdsq" path="res://Escenas/obstaculos/jump_pad.tscn" id="10_tjm7o"]
+[ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://Recursos/fonts/PixelOperator8-Bold.ttf" id="11_rvnjf"]
+[ext_resource type="PackedScene" uid="uid://chrw7kpvwxbis" path="res://Escenas/cambio de zonas/cambio_de_zona_left.tscn" id="12_ogq6g"]
+[ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zona Left/cambio_zona_2_a_3_nivel1l.gd" id="13_r3mdv"]
+[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://Recursos/sprites/hearth.png" id="14_24y8y"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://Recursos/sprites/Fondo/bg.png" id="15_vln0w"]
+[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://Recursos/fonts/PixelOperator8.ttf" id="15_xcu2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x13kc"]
-texture = ExtResource("6_hbbun")
+texture = ExtResource("1_bg6n4")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, -6.9375, -12, -7.125)
@@ -49,7 +50,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_x13kc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_auwep"]
-texture = ExtResource("5_ioqi1")
+texture = ExtResource("2_4py50")
 texture_region_size = Vector2i(24, 24)
 0:0/next_alternative_id = 2
 0:0/0 = 0
@@ -89,7 +90,7 @@ texture_region_size = Vector2i(24, 24)
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iqppq"]
-texture = ExtResource("6_hbbun")
+texture = ExtResource("1_bg6n4")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, -7.00831, -12, -7.00831)
@@ -111,7 +112,7 @@ texture_region_size = Vector2i(24, 24)
 1:1/0/physics_layer_0/polygon_0/one_way = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ruel1"]
-texture = ExtResource("3_2dugb")
+texture = ExtResource("3_ni7c1")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
@@ -201,7 +202,7 @@ sources/1 = SubResource("TileSetAtlasSource_iqppq")
 sources/2 = SubResource("TileSetAtlasSource_ruel1")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iy2fu"]
-texture = ExtResource("7_i73tp")
+texture = ExtResource("4_2g2ra")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 1:0/0 = 0
@@ -231,6 +232,10 @@ distance = -38.2088
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlciy"]
 size = Vector2(13, 74.5)
 
+[sub_resource type="GDScript" id="GDScript_k875i"]
+script/source = "extends Label
+"
+
 [node name="nivel prototipo 2" type="Node2D"]
 
 [node name="tilemaps" type="Node2D" parent="."]
@@ -247,15 +252,15 @@ tile_set = SubResource("TileSet_y6ikq")
 tile_map_data = PackedByteArray("AAAQAAwAAAABAAAAAAARAAwAAAABAAAAAAASAAwAAAABAAAAAAATAAwAAAABAAAAAAAPAAwAAAABAAAAAAAOAAwAAAAAAAAAAAAUAAwAAAACAAAAAAAYAAwAAAAAAAEAAAAZAAwAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_v8p7i")
 
-[node name="Cambio de zona Right" parent="." instance=ExtResource("1_xjm53")]
+[node name="Cambio de zona Right" parent="." instance=ExtResource("5_2enxs")]
 position = Vector2(18.7756, 240.23)
-script = ExtResource("2_6j4g3")
+script = ExtResource("6_qlqdr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cambio de zona Right"]
 position = Vector2(-39.2756, 11.7697)
 shape = SubResource("RectangleShape2D_dybdu")
 
-[node name="Player" parent="." instance=ExtResource("3_6qt2m")]
+[node name="Player" parent="." instance=ExtResource("7_htdy0")]
 position = Vector2(107, 275)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -267,34 +272,34 @@ limit_bottom = 342
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
-[node name="Coins" parent="." instance=ExtResource("10_j83yr")]
+[node name="Coins" parent="." instance=ExtResource("8_lgtej")]
 position = Vector2(495.136, 236.358)
 
 [node name="obstaculos" type="Node2D" parent="."]
 
-[node name="Water" parent="obstaculos" instance=ExtResource("4_aswsw")]
+[node name="Water" parent="obstaculos" instance=ExtResource("9_kslwg")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obstaculos/Water"]
 position = Vector2(419, 288.75)
 shape = SubResource("RectangleShape2D_8o5im")
 
-[node name="Water2" parent="obstaculos" instance=ExtResource("4_aswsw")]
+[node name="Water2" parent="obstaculos" instance=ExtResource("9_kslwg")]
 position = Vector2(595.862, 280.167)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obstaculos/Water2"]
 position = Vector2(4.1377, 8.83334)
 shape = SubResource("RectangleShape2D_tdm86")
 
-[node name="Jump pad" parent="obstaculos" instance=ExtResource("7_rhd85")]
+[node name="Jump pad" parent="obstaculos" instance=ExtResource("10_tjm7o")]
 position = Vector2(252.567, 227.882)
 
-[node name="Jump pad2" parent="obstaculos" instance=ExtResource("7_rhd85")]
+[node name="Jump pad2" parent="obstaculos" instance=ExtResource("10_tjm7o")]
 position = Vector2(755.36, 251.569)
 
-[node name="Jump pad3" parent="obstaculos" instance=ExtResource("7_rhd85")]
+[node name="Jump pad3" parent="obstaculos" instance=ExtResource("10_tjm7o")]
 position = Vector2(683.855, 204.096)
 
-[node name="vacio" parent="obstaculos" instance=ExtResource("4_aswsw")]
+[node name="vacio" parent="obstaculos" instance=ExtResource("9_kslwg")]
 position = Vector2(-56, 187)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obstaculos/vacio"]
@@ -306,13 +311,13 @@ offset_left = 100.0
 offset_top = 112.0
 offset_right = 265.0
 offset_bottom = 154.0
-theme_override_fonts/font = ExtResource("11_unmqj")
+theme_override_fonts/font = ExtResource("11_rvnjf")
 theme_override_font_sizes/font_size = 30
 text = "Zona 2"
 
-[node name="Cambio de zona left" parent="." instance=ExtResource("12_cu8g6")]
+[node name="Cambio de zona left" parent="." instance=ExtResource("12_ogq6g")]
 position = Vector2(1105, 262)
-script = ExtResource("13_t5jie")
+script = ExtResource("13_r3mdv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cambio de zona left"]
 position = Vector2(13.5, -9.75)
@@ -332,7 +337,7 @@ offset_bottom = -163.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-texture = ExtResource("14_3lfjn")
+texture = ExtResource("14_24y8y")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -342,9 +347,22 @@ offset_top = 3.0
 offset_right = 45.0
 offset_bottom = 17.0
 size_flags_horizontal = 3
-texture = ExtResource("14_3lfjn")
+texture = ExtResource("14_24y8y")
 expand_mode = 1
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Puntos" type="Label" parent="UI"]
+offset_left = 300.0
+offset_top = 6.0
+offset_right = 389.0
+offset_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("15_xcu2f")
+theme_override_font_sizes/font_size = 11
+text = "0"
+script = SubResource("GDScript_k875i")
 metadata/_edit_use_anchors_ = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -357,7 +375,7 @@ custom_minimum_size = Vector2(320, 180)
 offset_left = -36.0
 offset_right = 1309.0
 offset_bottom = 361.0
-texture = ExtResource("15_vcefw")
+texture = ExtResource("15_vln0w")
 stretch_mode = 1
 
 [connection signal="body_entered" from="Cambio de zona Right" to="Cambio de zona Right" method="_on_body_entered"]

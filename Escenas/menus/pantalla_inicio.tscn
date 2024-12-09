@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://6poq2wks55ll"]
 
-[ext_resource type="Theme" uid="uid://c3w4bot3r237h" path="res://UI_theme.tres" id="1_nhmda"]
+[ext_resource type="Theme" uid="uid://c3w4bot3r237h" path="res://Shaders/UI_theme.tres" id="1_nhmda"]
 [ext_resource type="Script" path="res://Scritps/scritps menus/pantalla_inicio.gd" id="1_wcr3e"]
-[ext_resource type="PackedScene" uid="uid://cl5j8hkvork42" path="res://Escenas/menu_bg.tscn" id="3_c4l1e"]
-[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="3_heocm"]
+[ext_resource type="PackedScene" uid="uid://cl5j8hkvork42" path="res://Escenas/menus/menu_bg.tscn" id="3_c4l1e"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://Recursos/fonts/KiwiSoda.ttf" id="3_heocm"]
 
 [sub_resource type="Gradient" id="Gradient_j57ed"]
 offsets = PackedFloat32Array(0, 0.539474)

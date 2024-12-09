@@ -1,20 +1,21 @@
-[gd_scene load_steps=21 format=4 uid="uid://basy2y520hiom"]
+[gd_scene load_steps=23 format=4 uid="uid://basy2y520hiom"]
 
-[ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/vacio.tscn" id="1_dpd6i"]
-[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="1_ng5ql"]
-[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://recursos/Sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="2_7bdlq"]
-[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://recursos/Sprites/tileset_metal.png" id="3_s1usj"]
-[ext_resource type="Texture2D" uid="uid://dkcwkml6f4uog" path="res://recursos/Sprites/charcos de agua 24x24 prototipo Sprite-0001.png" id="4_675bl"]
-[ext_resource type="PackedScene" uid="uid://dfjh4dt5rfwa8" path="res://Escenas/cambio de zonas/cambio_de_zona_right.tscn" id="5_whqwm"]
-[ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/player.tscn" id="7_6rqua"]
-[ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zonas Right/cambio_zona_3_a_2_nivel1.gd" id="8_5orok"]
-[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://recursos/Sprites/UI/hearth.png" id="9_nn2la"]
-[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="10_rndgv"]
+[ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/obstaculos/vacio.tscn" id="1_nsox7"]
+[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://Recursos/sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_1jbxp"]
+[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://Recursos/sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="3_gvcuk"]
+[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://Recursos/sprites/tileset_metal.png" id="4_0ahni"]
+[ext_resource type="Texture2D" uid="uid://dkcwkml6f4uog" path="res://Recursos/sprites/charcos de agua 24x24 prototipo Sprite-0001.png" id="5_11loq"]
+[ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/niveles/player.tscn" id="6_718w6"]
+[ext_resource type="PackedScene" uid="uid://dfjh4dt5rfwa8" path="res://Escenas/cambio de zonas/cambio_de_zona_right.tscn" id="7_btjoa"]
+[ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zonas Right/cambio_zona_3_a_2_nivel1.gd" id="8_xpoc4"]
+[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://Recursos/sprites/hearth.png" id="9_aoh8b"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://Recursos/sprites/Fondo/bg.png" id="10_c4m16"]
+[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://Recursos/fonts/PixelOperator8.ttf" id="10_ki1tw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1xh0q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e7art"]
-texture = ExtResource("1_ng5ql")
+texture = ExtResource("2_1jbxp")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, -6.9375, -12, -7.125)
@@ -46,7 +47,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_e7art")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wp377"]
-texture = ExtResource("2_7bdlq")
+texture = ExtResource("3_gvcuk")
 texture_region_size = Vector2i(24, 24)
 0:0/next_alternative_id = 2
 0:0/0 = 0
@@ -86,7 +87,7 @@ texture_region_size = Vector2i(24, 24)
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_woqtg"]
-texture = ExtResource("1_ng5ql")
+texture = ExtResource("2_1jbxp")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, -7.00831, -12, -7.00831)
@@ -108,7 +109,7 @@ texture_region_size = Vector2i(24, 24)
 1:1/0/physics_layer_0/polygon_0/one_way = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j47kd"]
-texture = ExtResource("3_s1usj")
+texture = ExtResource("4_0ahni")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
@@ -198,7 +199,7 @@ sources/1 = SubResource("TileSetAtlasSource_woqtg")
 sources/2 = SubResource("TileSetAtlasSource_j47kd")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_opfoo"]
-texture = ExtResource("4_675bl")
+texture = ExtResource("5_11loq")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 1:0/0 = 0
@@ -216,9 +217,13 @@ sources/0 = SubResource("TileSetAtlasSource_opfoo")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ia23g"]
 size = Vector2(7, 71)
 
+[sub_resource type="GDScript" id="GDScript_6imt7"]
+script/source = "extends Label
+"
+
 [node name="nivel prototipo 3" type="Node2D"]
 
-[node name="Area2D" parent="." instance=ExtResource("1_dpd6i")]
+[node name="Area2D" parent="." instance=ExtResource("1_nsox7")]
 position = Vector2(-63.5917, 362.673)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -236,7 +241,7 @@ tile_set = SubResource("TileSet_bp2uc")
 [node name="water" type="TileMapLayer" parent="tilemaps"]
 tile_set = SubResource("TileSet_dk3m1")
 
-[node name="Player" parent="." instance=ExtResource("7_6rqua")]
+[node name="Player" parent="." instance=ExtResource("6_718w6")]
 position = Vector2(116.971, 252.313)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -248,9 +253,9 @@ limit_bottom = 342
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
-[node name="Cambio de zona Right" parent="." instance=ExtResource("5_whqwm")]
+[node name="Cambio de zona Right" parent="." instance=ExtResource("7_btjoa")]
 position = Vector2(-13.3724, 256.255)
-script = ExtResource("8_5orok")
+script = ExtResource("8_xpoc4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cambio de zona Right"]
 position = Vector2(-7.12764, -4.25531)
@@ -270,7 +275,7 @@ offset_bottom = -163.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-texture = ExtResource("9_nn2la")
+texture = ExtResource("9_aoh8b")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -280,9 +285,22 @@ offset_top = 3.0
 offset_right = 45.0
 offset_bottom = 17.0
 size_flags_horizontal = 3
-texture = ExtResource("9_nn2la")
+texture = ExtResource("9_aoh8b")
 expand_mode = 1
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Puntos" type="Label" parent="UI"]
+offset_left = 300.0
+offset_top = 6.0
+offset_right = 389.0
+offset_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("10_ki1tw")
+theme_override_font_sizes/font_size = 11
+text = "0"
+script = SubResource("GDScript_6imt7")
 metadata/_edit_use_anchors_ = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -294,7 +312,7 @@ motion_scale = Vector2(0.1, 0.1)
 custom_minimum_size = Vector2(320, 180)
 offset_right = 863.0
 offset_bottom = 361.0
-texture = ExtResource("10_rndgv")
+texture = ExtResource("10_c4m16")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 

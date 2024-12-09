@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnm0d8qn3sbbe"
-path="res://.godot/imported/volume_bar_on.png-21872f4bb1bab06b237c7d1c3cd81eca.ctex"
+path="res://.godot/imported/volume_bar_on.png-69a0188473d4d25349833980af171740.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/Sprites/UI/volume_bar_on.png"
-dest_files=["res://.godot/imported/volume_bar_on.png-21872f4bb1bab06b237c7d1c3cd81eca.ctex"]
+source_file="res://Recursos/sprites/UI/volume_bar_on.png"
+dest_files=["res://.godot/imported/volume_bar_on.png-69a0188473d4d25349833980af171740.ctex"]
 
 [params]
 

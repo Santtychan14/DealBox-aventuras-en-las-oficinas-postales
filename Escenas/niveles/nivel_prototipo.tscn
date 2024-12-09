@@ -1,18 +1,18 @@
-[gd_scene load_steps=20 format=4 uid="uid://c5b1rm5qmp74p"]
+[gd_scene load_steps=21 format=4 uid="uid://c5b1rm5qmp74p"]
 
-[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://recursos/Sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="1_g4yi6"]
-[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_h2cjc"]
-[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://recursos/Sprites/tileset_metal.png" id="3_633w6"]
-[ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/player.tscn" id="3_oeo6j"]
-[ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/vacio.tscn" id="4_hyfmq"]
+[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://Recursos/sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="1_g4yi6"]
+[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://Recursos/sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_h2cjc"]
+[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://Recursos/sprites/tileset_metal.png" id="3_633w6"]
+[ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/niveles/player.tscn" id="3_oeo6j"]
+[ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/obstaculos/vacio.tscn" id="4_hyfmq"]
+[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://Recursos/fonts/PixelOperator8.ttf" id="4_nrm3b"]
 [ext_resource type="PackedScene" uid="uid://chrw7kpvwxbis" path="res://Escenas/cambio de zonas/cambio_de_zona_left.tscn" id="6_8qhj1"]
 [ext_resource type="PackedScene" uid="uid://ff3l3otwmdsq" path="res://Escenas/obstaculos/jump_pad.tscn" id="7_abghd"]
-[ext_resource type="PackedScene" uid="uid://btqt662w01j4j" path="res://Escenas/coins.tscn" id="8_lrnnr"]
+[ext_resource type="PackedScene" uid="uid://btqt662w01j4j" path="res://Escenas/obstaculos/coins.tscn" id="8_lrnnr"]
 [ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zona Left/cambio_zona_1_a_2_nivel1.gd" id="9_rg8a7"]
-[ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://recursos/Fonts/PixelOperator8-Bold.ttf" id="10_02ulg"]
-[ext_resource type="PackedScene" uid="uid://b0ipcyotlxng2" path="res://Escenas/enemigos.tscn" id="11_64fai"]
-[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://recursos/Sprites/UI/hearth.png" id="12_0dyx3"]
-[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="13_2156n"]
+[ext_resource type="PackedScene" uid="uid://b0ipcyotlxng2" path="res://Escenas/obstaculos/enemigos.tscn" id="11_64fai"]
+[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://Recursos/sprites/hearth.png" id="12_0dyx3"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://Recursos/sprites/Fondo/bg.png" id="13_2156n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24rym"]
 texture = ExtResource("1_g4yi6")
@@ -452,6 +452,10 @@ distance = -38.2088
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqqbe"]
 size = Vector2(7.50024, 71)
 
+[sub_resource type="GDScript" id="GDScript_g3ntc"]
+script/source = "extends Label
+"
+
 [node name="nivel prototipo" type="Node2D"]
 
 [node name="tilemap prototipo" type="TileMapLayer" parent="."]
@@ -465,7 +469,7 @@ offset_left = 86.0
 offset_top = 180.0
 offset_right = 251.0
 offset_bottom = 211.0
-theme_override_fonts/font = ExtResource("10_02ulg")
+theme_override_fonts/font = ExtResource("4_nrm3b")
 theme_override_font_sizes/font_size = 30
 text = "Zona 1"
 
@@ -535,6 +539,19 @@ grow_vertical = 2
 size_flags_horizontal = 3
 texture = ExtResource("12_0dyx3")
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Puntos" type="Label" parent="UI"]
+offset_left = 300.0
+offset_top = 6.0
+offset_right = 389.0
+offset_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("4_nrm3b")
+theme_override_font_sizes/font_size = 11
+text = "0"
+script = SubResource("GDScript_g3ntc")
 metadata/_edit_use_anchors_ = true
 
 [node name="hearths" type="TextureRect" parent="UI"]
