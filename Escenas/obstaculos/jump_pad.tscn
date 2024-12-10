@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://ff3l3otwmdsq"]
+[gd_scene load_steps=13 format=3 uid="uid://ff3l3otwmdsq"]
 
 [ext_resource type="Script" path="res://Scritps/jump_pad.gd" id="1_5xpae"]
-[ext_resource type="Texture2D" uid="uid://d2e2ibknpq2pu" path="res://Recursos/sprites/jump pad prototipo v 1 Sprite-0001-Sheet.png" id="1_ldvth"]
+[ext_resource type="Texture2D" uid="uid://d2e2ibknpq2pu" path="res://recursos/Sprites/jump pad prototipo v 1 Sprite-0001-Sheet.png" id="1_ldvth"]
+[ext_resource type="AudioStream" uid="uid://dc8jpqd8hu0u8" path="res://recursos/Sounds/jump_comp.wav" id="3_kuki7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvv3c"]
 atlas = ExtResource("1_ldvth")
@@ -61,6 +62,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lm54d"]
 size = Vector2(18, 5)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dtpuw"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("3_kuki7")
+
 [node name="Jump pad" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_5xpae")
@@ -74,5 +80,10 @@ frame_progress = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_lm54d")
+
+[node name="platform_jump" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_dtpuw")
+volume_db = -5.0
+pitch_scale = 0.7
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

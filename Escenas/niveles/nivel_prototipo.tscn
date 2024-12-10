@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://c5b1rm5qmp74p"]
+[gd_scene load_steps=23 format=4 uid="uid://c5b1rm5qmp74p"]
 
 [ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://recursos/Sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="1_g4yi6"]
 [ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_h2cjc"]
@@ -456,6 +456,15 @@ size = Vector2(7.50024, 71)
 script/source = "extends Label
 "
 
+[sub_resource type="Gradient" id="Gradient_54bo8"]
+offsets = PackedFloat32Array(0.505495, 1)
+colors = PackedColorArray(1, 0, 0, 0, 0.765711, 0, 0.0698584, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k6e6x"]
+gradient = SubResource("Gradient_54bo8")
+fill = 1
+fill_from = Vector2(0.529032, 0.483871)
+
 [node name="nivel prototipo" type="Node2D"]
 
 [node name="tilemap prototipo" type="TileMapLayer" parent="."]
@@ -493,6 +502,10 @@ limit_right = 840
 limit_bottom = 342
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
+
+[node name="shake_timer" type="Timer" parent="Player/Camera2D"]
+wait_time = 0.2
+one_shot = true
 
 [node name="vacio" parent="." instance=ExtResource("4_hyfmq")]
 position = Vector2(-19.2059, 207.791)
@@ -564,6 +577,15 @@ texture = ExtResource("12_0dyx3")
 expand_mode = 1
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="life_vignette" type="TextureRect" parent="UI"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_k6e6x")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

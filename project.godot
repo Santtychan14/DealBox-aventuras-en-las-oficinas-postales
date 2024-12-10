@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Dealbox 1.1"
+config/name="Regalos Errantes: Aventuras en las Oficinas Postales version 1.1"
 run/main_scene="res://Escenas/menus/pantalla_inicio.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://Recursos/sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png"
+config/icon="res://Recursos/sprites/sprite Dealbox 24x24 PNG Sprite-0002.png"
 
 [audio]
 

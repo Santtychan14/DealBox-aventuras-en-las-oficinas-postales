@@ -1,17 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://b00kdafgm2g4j"]
+[gd_scene load_steps=13 format=3 uid="uid://b00kdafgm2g4j"]
 
-[ext_resource type="Texture2D" uid="uid://byojeapujk77x" path="res://Recursos/sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png" id="1_01fsl"]
 [ext_resource type="Script" path="res://Scritps/player.gd" id="1_oenvx"]
+[ext_resource type="Texture2D" uid="uid://b8r5k0r4x34yo" path="res://recursos/Sprites/sprite Dealbox 24x24 PNG Sprite-0002.png" id="2_lff8b"]
+[ext_resource type="Script" path="res://Scritps/salto.gd" id="3_f1dfd"]
+[ext_resource type="AudioStream" uid="uid://dc8jpqd8hu0u8" path="res://recursos/Sounds/jump_comp.wav" id="4_p37ip"]
+[ext_resource type="AudioStream" uid="uid://dd5tws3tkwg25" path="res://recursos/Sounds/pickupCoin.wav" id="5_k1w4y"]
+[ext_resource type="AudioStream" uid="uid://bcuagcegc2dlq" path="res://recursos/Sounds/hitHurt.wav" id="6_okick"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_em74i"]
-atlas = ExtResource("1_01fsl")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujq86"]
+atlas = ExtResource("2_lff8b")
 region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cr0ym"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_em74i")
+"texture": SubResource("AtlasTexture_ujq86")
 }],
 "loop": true,
 "name": &"default",
@@ -19,7 +23,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy5ac"]
-size = Vector2(12, 12)
+size = Vector2(14, 13)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5iuuy"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("4_p37ip")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4mgvg"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("5_k1w4y")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w4rqy"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("6_okick")
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 3
@@ -29,5 +48,25 @@ script = ExtResource("1_oenvx")
 sprite_frames = SubResource("SpriteFrames_cr0ym")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
+position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_hy5ac")
+
+[node name="salto" type="Node2D" parent="."]
+script = ExtResource("3_f1dfd")
+
+[node name="salto" type="AudioStreamPlayer" parent="salto"]
+stream = SubResource("AudioStreamRandomizer_5iuuy")
+volume_db = -10.0
+bus = &"Sounds"
+
+[node name="temporizador" type="Timer" parent="salto"]
+one_shot = true
+
+[node name="pickup" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_4mgvg")
+volume_db = -10.0
+
+[node name="damage" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_w4rqy")
+volume_db = -10.0
+pitch_scale = 0.5
