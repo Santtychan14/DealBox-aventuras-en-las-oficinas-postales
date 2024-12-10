@@ -1,0 +1,163 @@
+[gd_scene load_steps=12 format=3 uid="uid://bdmv6ncorhxew"]
+
+[ext_resource type="Script" path="res://Scritps/scritps menus/pantalla_inicio.gd" id="1_akiv7"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/exit_menu.gd" id="2_8kb1c"]
+[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://Recursos/fonts/PixelOperator8.ttf" id="2_ay8l1"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/button.gd" id="3_fk30m"]
+[ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://Recursos/fonts/PixelOperator8-Bold.ttf" id="4_mwnco"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/ButtonExit.gd" id="5_3gjwk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wshs"]
+bg_color = Color(0, 0, 0, 0.643137)
+
+[sub_resource type="Animation" id="Animation_3mmqi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boton?_ni_idea_que_sea:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_d4nlq"]
+resource_name = "desaparecer"
+
+[sub_resource type="Animation" id="Animation_n22r7"]
+resource_name = "parpadeo"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boton?_ni_idea_que_sea:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.392157), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x1yoa"]
+_data = {
+"RESET": SubResource("Animation_3mmqi"),
+"desaparecer": SubResource("Animation_d4nlq"),
+"parpadeo": SubResource("Animation_n22r7")
+}
+
+[node name="Setting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_akiv7")
+
+[node name="boton?_ni_idea_que_sea" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 159.0
+offset_right = 480.0
+offset_bottom = 191.0
+color = Color(1, 1, 1, 0)
+
+[node name="ExitMenu" type="Button" parent="boton?_ni_idea_que_sea"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 15.0
+offset_right = 131.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("4_mwnco")
+text = "Exit"
+script = ExtResource("2_8kb1c")
+
+[node name="volumen" type="Button" parent="boton?_ni_idea_que_sea"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = -37.0
+offset_right = 185.0
+offset_bottom = -6.0
+theme_override_fonts/font = ExtResource("2_ay8l1")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wshs")
+text = "Volumen"
+script = ExtResource("3_fk30m")
+
+[node name="music" type="Button" parent="boton?_ni_idea_que_sea"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = -83.0
+offset_right = 167.0
+offset_bottom = -52.0
+theme_override_fonts/font = ExtResource("2_ay8l1")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wshs")
+text = "Musica"
+script = ExtResource("3_fk30m")
+
+[node name="Exit" type="Button" parent="boton?_ni_idea_que_sea"]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 9.0
+offset_right = 408.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("4_mwnco")
+text = "off"
+script = ExtResource("5_3gjwk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x1yoa")
+}
+autoplay = "parpadeo"
+
+[node name="Color_presentación" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 491.0
+offset_bottom = 242.0
+color = Color(0, 0, 0, 1)
+
+[node name="texto_presentación" type="Label" parent="Color_presentación"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 188.0
+offset_top = 121.0
+offset_right = 272.0
+offset_bottom = 144.0
+text = "creado por"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(240, 119)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 18.0
+offset_right = 438.0
+offset_bottom = 119.0
+text = "nota. estas opciones solo 
+son decoracion y solo te
+llevaran al prototipo del 
+juego, ¡ya estan advertidos...!"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 155.0
+offset_right = 398.0
+offset_bottom = 256.0
+text = "otra nota. 
+off y Exit si sirven :)"
+
+[connection signal="pressed" from="boton?_ni_idea_que_sea/ExitMenu" to="boton?_ni_idea_que_sea/ExitMenu" method="_on_pressed"]
+[connection signal="pressed" from="boton?_ni_idea_que_sea/volumen" to="boton?_ni_idea_que_sea/volumen" method="_on_pressed"]
+[connection signal="pressed" from="boton?_ni_idea_que_sea/music" to="boton?_ni_idea_que_sea/music" method="_on_pressed"]
+[connection signal="pressed" from="boton?_ni_idea_que_sea/Exit" to="boton?_ni_idea_que_sea/Exit" method="_on_pressed"]

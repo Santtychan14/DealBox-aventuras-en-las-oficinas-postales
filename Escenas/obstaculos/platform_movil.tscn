@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://eaxd7lp0jso8"]
+
+[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://Recursos/sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="1_oknxd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_om2h5"]
+size = Vector2(48, 4)
+
+[node name="platform movil" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oknxd")
+region_enabled = true
+region_rect = Rect2(0, 24, 48, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_om2h5")
+one_way_collision = true

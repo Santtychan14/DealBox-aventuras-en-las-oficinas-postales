@@ -1,0 +1,44 @@
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://c3w4bot3r237h"]
+
+[ext_resource type="Texture2D" uid="uid://drbvx23g7pg56" path="res://recursos/Sprites/UI/button_normal.png" id="1_7c74y"]
+[ext_resource type="Texture2D" uid="uid://dws20lki43s5b" path="res://recursos/Sprites/UI/button_disabled.png" id="1_758o2"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="1_f3vsl"]
+[ext_resource type="Texture2D" uid="uid://dveio2e17eedq" path="res://recursos/Sprites/UI/button_hover.png" id="2_24hur"]
+[ext_resource type="FontFile" uid="uid://dm4b2kq52i8kt" path="res://recursos/Fonts/m5x7.ttf" id="2_am7xo"]
+[ext_resource type="Texture2D" uid="uid://bxg53oenyqn1t" path="res://recursos/Sprites/UI/button_pressed.png" id="4_j2lhy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdimi"]
+texture = ExtResource("1_758o2")
+expand_margin_top = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nwtkg"]
+texture = ExtResource("2_24hur")
+expand_margin_top = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_knoni"]
+texture = ExtResource("1_7c74y")
+expand_margin_top = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5yb8y"]
+texture = ExtResource("4_j2lhy")
+expand_margin_top = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4o3d"]
+bg_color = Color(0.485703, 0.485704, 0.485703, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78mup"]
+bg_color = Color(0, 0, 0, 0.603922)
+
+[resource]
+default_font = ExtResource("2_am7xo")
+Button/colors/font_color = Color(0.678431, 0.372549, 0.388235, 1)
+Button/colors/font_disabled_color = Color(0.454902, 0.431373, 0.427451, 0.576471)
+Button/colors/font_hover_color = Color(0.309804, 0.572549, 0.729412, 1)
+Button/colors/font_pressed_color = Color(0.781453, 0.798705, 0.818446, 1)
+Button/fonts/font = ExtResource("1_f3vsl")
+Button/styles/disabled = SubResource("StyleBoxTexture_sdimi")
+Button/styles/hover = SubResource("StyleBoxTexture_nwtkg")
+Button/styles/normal = SubResource("StyleBoxTexture_knoni")
+Button/styles/pressed = SubResource("StyleBoxTexture_5yb8y")
+Panel/styles/panel = SubResource("StyleBoxFlat_e4o3d")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_78mup")

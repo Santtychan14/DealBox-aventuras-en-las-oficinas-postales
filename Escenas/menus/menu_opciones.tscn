@@ -1,0 +1,352 @@
+[gd_scene load_steps=20 format=3 uid="uid://c32oqc32j6l1f"]
+
+[ext_resource type="Theme" uid="uid://c3w4bot3r237h" path="res://Shaders/UI_theme.tres" id="1_ugm6h"]
+[ext_resource type="PackedScene" uid="uid://cl5j8hkvork42" path="res://Escenas/menus/menu_bg.tscn" id="2_xcbw6"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/volume_button.gd" id="4_ppm6y"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="4_y4eam"]
+[ext_resource type="Texture2D" uid="uid://b6mf3m38t3xgm" path="res://recursos/Sprites/UI/icon_volume_off.png" id="5_8fi25"]
+[ext_resource type="Texture2D" uid="uid://b25005y4n8wt5" path="res://recursos/Sprites/UI/icon_volume_on.png" id="6_1y2oq"]
+[ext_resource type="Texture2D" uid="uid://cn18u6ohrds1b" path="res://recursos/Sprites/UI/volume_bar_off.png" id="7_7irwu"]
+[ext_resource type="Texture2D" uid="uid://cnm0d8qn3sbbe" path="res://recursos/Sprites/UI/volume_bar_on.png" id="8_x3u32"]
+[ext_resource type="AudioStream" uid="uid://btw0vjsqt8k13" path="res://recursos/Sounds/open.wav" id="9_41mhe"]
+[ext_resource type="AudioStream" uid="uid://c4su6sq0hygds" path="res://recursos/Sounds/add.wav" id="9_at40m"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/back.gd" id="11_tnnsx"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/ButtonExit.gd" id="12_uduq1"]
+
+[sub_resource type="Animation" id="Animation_3mmqi"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_d4nlq"]
+resource_name = "desaparecer"
+
+[sub_resource type="Animation" id="Animation_n22r7"]
+resource_name = "parpadeo"
+length = 2.0
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x1yoa"]
+_data = {
+"RESET": SubResource("Animation_3mmqi"),
+"desaparecer": SubResource("Animation_d4nlq"),
+"parpadeo": SubResource("Animation_n22r7")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpbsf"]
+bg_color = Color(0.993825, 0.969304, 0.946494, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.866667, 0.772549, 0.733333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlv4x"]
+bg_color = Color(0.996907, 0.984668, 0.973309, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.963978, 0.936853, 0.925663, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0ro8"]
+bg_color = Color(0.984314, 0.921569, 0.862745, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.866667, 0.772549, 0.733333, 1)
+
+[node name="pantalla_inicio" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ugm6h")
+
+[node name="TextureRect" parent="." instance=ExtResource("2_xcbw6")]
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LOGO" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -71.0
+offset_right = 33.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_y4eam")
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LOGO" type="Label" parent="LOGO"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = 7.0
+offset_right = 88.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.784314)
+text = "Adventures at the postal offices"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x1yoa")
+}
+autoplay = "parpadeo"
+
+[node name="Color_presentación" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 491.0
+offset_bottom = 242.0
+color = Color(0, 0, 0, 1)
+
+[node name="texto_presentación" type="Label" parent="Color_presentación"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 188.0
+offset_top = 121.0
+offset_right = 272.0
+offset_bottom = 144.0
+text = "creado por"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = -68.0
+offset_right = 147.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+tab_focus_mode = 0
+
+[node name="Audio" type="MarginContainer" parent="TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Audio"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Audio/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = -4
+
+[node name="Music" type="HBoxContainer" parent="TabContainer/Audio/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 39.95)
+layout_mode = 2
+
+[node name="Music" type="Button" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Music"]
+custom_minimum_size = Vector2(88.815, 27)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+text = "Music"
+script = ExtResource("4_ppm6y")
+
+[node name="card" type="ColorRect" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music"]
+show_behind_parent = true
+layout_mode = 2
+offset_left = 27.0
+offset_top = -2.0
+offset_right = 88.0
+offset_bottom = 27.0
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0.866667, 0.772549, 0.733333, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music/card"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -12.5
+offset_right = 27.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music/card/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="minus" type="Button" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music/card/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+icon = ExtResource("5_8fi25")
+flat = true
+
+[node name="Control" type="Control" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music/card/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music/card/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+icon = ExtResource("6_1y2oq")
+flat = true
+
+[node name="ProgressBar" type="TextureProgressBar" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music/card/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+step = 2.0
+value = 50.0
+texture_under = ExtResource("7_7irwu")
+texture_progress = ExtResource("8_x3u32")
+
+[node name="Sounds" type="HBoxContainer" parent="TabContainer/Audio/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 39.95)
+layout_mode = 2
+
+[node name="Sounds" type="Button" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds"]
+custom_minimum_size = Vector2(88.815, 27)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+text = "Sounds"
+script = ExtResource("4_ppm6y")
+
+[node name="card" type="ColorRect" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds"]
+show_behind_parent = true
+layout_mode = 2
+offset_left = 27.0
+offset_top = -2.0
+offset_right = 88.0
+offset_bottom = 27.0
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0.866667, 0.772549, 0.733333, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds/card"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -12.5
+offset_right = 27.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds/card/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="minus" type="Button" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds/card/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+icon = ExtResource("5_8fi25")
+flat = true
+
+[node name="Control" type="Control" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds/card/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds/card/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+icon = ExtResource("6_1y2oq")
+flat = true
+
+[node name="ProgressBar" type="TextureProgressBar" parent="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds/card/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+step = 2.0
+value = 50.0
+texture_under = ExtResource("7_7irwu")
+texture_progress = ExtResource("8_x3u32")
+
+[node name="open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_41mhe")
+volume_db = -2.0
+bus = &"Sounds"
+
+[node name="close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_41mhe")
+volume_db = -2.0
+pitch_scale = 0.5
+bus = &"Sounds"
+
+[node name="add" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_at40m")
+bus = &"Sounds"
+
+[node name="substract" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_at40m")
+volume_db = -0.5
+pitch_scale = 0.75
+bus = &"Sounds"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 146.0
+offset_right = 37.0
+offset_bottom = 166.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.678431, 0.372549, 0.388235, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_lpbsf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qlv4x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_y0ro8")
+text = "<"
+script = ExtResource("11_tnnsx")
+
+[node name="Exit" type="Button" parent="Back"]
+offset_left = 222.0
+offset_top = -3.0
+offset_right = 288.0
+offset_bottom = 21.0
+theme_override_fonts/font = ExtResource("4_y4eam")
+text = "off"
+script = ExtResource("12_uduq1")
+
+[connection signal="pressed" from="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music" to="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music" method="_on_pressed"]
+[connection signal="pressed" from="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music/card/VBoxContainer/HBoxContainer/minus" to="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music" method="_on_minus_pressed"]
+[connection signal="pressed" from="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music/card/VBoxContainer/HBoxContainer/plus" to="TabContainer/Audio/ScrollContainer/VBoxContainer/Music/Music" method="_on_plus_pressed"]
+[connection signal="pressed" from="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds" to="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds" method="_on_pressed"]
+[connection signal="pressed" from="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds/card/VBoxContainer/HBoxContainer/minus" to="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds" method="_on_minus_pressed"]
+[connection signal="pressed" from="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds/card/VBoxContainer/HBoxContainer/plus" to="TabContainer/Audio/ScrollContainer/VBoxContainer/Sounds/Sounds" method="_on_plus_pressed"]
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
+[connection signal="pressed" from="Back/Exit" to="Back/Exit" method="_on_pressed"]

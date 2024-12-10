@@ -1,0 +1,164 @@
+[gd_scene load_steps=11 format=3 uid="uid://6poq2wks55ll"]
+
+[ext_resource type="Theme" uid="uid://c3w4bot3r237h" path="res://Shaders/UI_theme.tres" id="1_nhmda"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/pantalla_inicio.gd" id="1_wcr3e"]
+[ext_resource type="PackedScene" uid="uid://cl5j8hkvork42" path="res://Escenas/menus/menu_bg.tscn" id="3_c4l1e"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="3_heocm"]
+
+[sub_resource type="Gradient" id="Gradient_j57ed"]
+offsets = PackedFloat32Array(0, 0.539474)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ij1qr"]
+gradient = SubResource("Gradient_j57ed")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Animation" id="Animation_3mmqi"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_d4nlq"]
+resource_name = "desaparecer"
+
+[sub_resource type="Animation" id="Animation_n22r7"]
+resource_name = "parpadeo"
+length = 2.0
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x1yoa"]
+_data = {
+"RESET": SubResource("Animation_3mmqi"),
+"desaparecer": SubResource("Animation_d4nlq"),
+"parpadeo": SubResource("Animation_n22r7")
+}
+
+[node name="pantalla_inicio" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_nhmda")
+script = ExtResource("1_wcr3e")
+
+[node name="TextureRect" parent="." instance=ExtResource("3_c4l1e")]
+layout_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.74902, 0.698039, 0.87451, 0.894118)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ij1qr")
+
+[node name="LOGO" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -19.0
+offset_right = 32.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_heocm")
+text = "DEALBOX"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="LOGO" type="Label" parent="LOGO"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = 7.0
+offset_right = 88.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.784314)
+text = "Adventures at the postal offices"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -178.0
+offset_top = -45.0
+offset_right = 178.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Credits" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(88.815, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.647059, 0.301961, 0.290196, 1)
+theme_override_fonts/font = ExtResource("3_heocm")
+disabled = true
+text = "Credits"
+icon_alignment = 1
+
+[node name="Play" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(88.815, 27.22)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.647059, 0.301961, 0.290196, 1)
+theme_override_fonts/font = ExtResource("3_heocm")
+text = "Play"
+icon_alignment = 1
+
+[node name="Settings" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(88.815, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.647059, 0.301961, 0.290196, 1)
+theme_override_fonts/font = ExtResource("3_heocm")
+text = "Settings"
+icon_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x1yoa")
+}
+autoplay = "parpadeo"
+
+[node name="Color_presentación" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 491.0
+offset_bottom = 242.0
+color = Color(0, 0, 0, 1)
+
+[node name="texto_presentación" type="Label" parent="Color_presentación"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 188.0
+offset_top = 121.0
+offset_right = 272.0
+offset_bottom = 144.0
+text = "creado por"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]

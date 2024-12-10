@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://ff3l3otwmdsq"]
+
+[ext_resource type="Script" path="res://Scritps/jump_pad.gd" id="1_5xpae"]
+[ext_resource type="Texture2D" uid="uid://d2e2ibknpq2pu" path="res://Recursos/sprites/jump pad prototipo v 1 Sprite-0001-Sheet.png" id="1_ldvth"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvv3c"]
+atlas = ExtResource("1_ldvth")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxuam"]
+atlas = ExtResource("1_ldvth")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikb53"]
+atlas = ExtResource("1_ldvth")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8nnq"]
+atlas = ExtResource("1_ldvth")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xsl4"]
+atlas = ExtResource("1_ldvth")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g18v"]
+atlas = ExtResource("1_ldvth")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3r05n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvv3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxuam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikb53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8nnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xsl4")
+}],
+"loop": false,
+"name": &"Jump pad activado",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g18v")
+}],
+"loop": true,
+"name": &"Jump pad idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm54d"]
+size = Vector2(18, 5)
+
+[node name="Jump pad" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_5xpae")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3r05n")
+animation = &"Jump pad activado"
+frame = 4
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_lm54d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
