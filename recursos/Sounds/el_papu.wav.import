@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bm7phwlbvou8a"
-path="res://.godot/imported/el_papu.wav-12ea3816c8f7ada514953982e9b6dc75.sample"
+uid="uid://r3esa5ilxc7w"
+path="res://.godot/imported/el_papu.wav-5b7741461e5efc98e2dba40e0716fb1f.sample"
 
 [deps]
 
-source_file="res://Recursos/sounds/el_papu.wav"
-dest_files=["res://.godot/imported/el_papu.wav-12ea3816c8f7ada514953982e9b6dc75.sample"]
+source_file="res://recursos/Sounds/el_papu.wav"
+dest_files=["res://.godot/imported/el_papu.wav-5b7741461e5efc98e2dba40e0716fb1f.sample"]
 
 [params]
 

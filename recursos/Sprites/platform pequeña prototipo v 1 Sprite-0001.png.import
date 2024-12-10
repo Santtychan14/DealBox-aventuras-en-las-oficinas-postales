@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnebt3c67p5ec"
-path="res://.godot/imported/platform pequeña prototipo v 1 Sprite-0001.png-460662b2f1da38a1b039e9060bab3f26.ctex"
+uid="uid://dvc03ng6q8rbp"
+path="res://.godot/imported/platform pequeña prototipo v 1 Sprite-0001.png-866a93b533c6fa88a4895c6eb0eb3e82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/sprites/platform pequeña prototipo v 1 Sprite-0001.png"
-dest_files=["res://.godot/imported/platform pequeña prototipo v 1 Sprite-0001.png-460662b2f1da38a1b039e9060bab3f26.ctex"]
+source_file="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png"
+dest_files=["res://.godot/imported/platform pequeña prototipo v 1 Sprite-0001.png-866a93b533c6fa88a4895c6eb0eb3e82.ctex"]
 
 [params]
 

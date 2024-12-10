@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf5u3paurksom"
-path="res://.godot/imported/boxten prototipo de sprites de 24x24 Sprite-0001.png-31d45d20624400ac9fe04db9885652dd.ctex"
+uid="uid://byojeapujk77x"
+path="res://.godot/imported/boxten prototipo de sprites de 24x24 Sprite-0001.png-8b03338b6a14b3155628dafa799f86a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png"
-dest_files=["res://.godot/imported/boxten prototipo de sprites de 24x24 Sprite-0001.png-31d45d20624400ac9fe04db9885652dd.ctex"]
+source_file="res://recursos/Sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png"
+dest_files=["res://.godot/imported/boxten prototipo de sprites de 24x24 Sprite-0001.png-8b03338b6a14b3155628dafa799f86a3.ctex"]
 
 [params]
 
