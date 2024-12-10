@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=3 uid="uid://b00kdafgm2g4j"]
 
 [ext_resource type="Texture2D" uid="uid://byojeapujk77x" path="res://Recursos/sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png" id="1_01fsl"]
@@ -5,13 +6,28 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_em74i"]
 atlas = ExtResource("1_01fsl")
+=======
+[gd_scene load_steps=8 format=3 uid="uid://b00kdafgm2g4j"]
+
+[ext_resource type="Script" path="res://Scritps/player.gd" id="1_oenvx"]
+[ext_resource type="Texture2D" uid="uid://b8r5k0r4x34yo" path="res://recursos/Sprites/sprite Dealbox 24x24 PNG Sprite-0002.png" id="2_lff8b"]
+[ext_resource type="Script" path="res://Scritps/salto.gd" id="3_f1dfd"]
+[ext_resource type="AudioStream" uid="uid://w7450mduyahm" path="res://recursos/Sounds/cartoon-jump-6462.mp3" id="4_2c6tf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujq86"]
+atlas = ExtResource("2_lff8b")
+>>>>>>> 74e04897809409092bb2c34f6aa1d089d9406ab8
 region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cr0ym"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+<<<<<<< HEAD
 "texture": SubResource("AtlasTexture_em74i")
+=======
+"texture": SubResource("AtlasTexture_ujq86")
+>>>>>>> 74e04897809409092bb2c34f6aa1d089d9406ab8
 }],
 "loop": true,
 "name": &"default",
@@ -19,7 +35,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy5ac"]
+<<<<<<< HEAD
 size = Vector2(12, 12)
+=======
+size = Vector2(14, 13)
+>>>>>>> 74e04897809409092bb2c34f6aa1d089d9406ab8
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 3
@@ -29,5 +49,19 @@ script = ExtResource("1_oenvx")
 sprite_frames = SubResource("SpriteFrames_cr0ym")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_hy5ac")
+=======
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_hy5ac")
+
+[node name="salto" type="Node2D" parent="."]
+script = ExtResource("3_f1dfd")
+
+[node name="salto" type="AudioStreamPlayer" parent="salto"]
+stream = ExtResource("4_2c6tf")
+
+[node name="temporizador" type="Timer" parent="salto"]
+one_shot = true
+>>>>>>> 74e04897809409092bb2c34f6aa1d089d9406ab8

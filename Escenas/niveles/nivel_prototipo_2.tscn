@@ -1,21 +1,37 @@
 [gd_scene load_steps=31 format=4 uid="uid://chunn8ca5101a"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://Recursos/sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="1_bg6n4"]
 [ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://Recursos/sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="2_4py50"]
 [ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://Recursos/sprites/tileset_metal.png" id="3_ni7c1"]
 [ext_resource type="Texture2D" uid="uid://dkcwkml6f4uog" path="res://Recursos/sprites/charcos de agua 24x24 prototipo Sprite-0001.png" id="4_2g2ra"]
+=======
+[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="1_bg6n4"]
+[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://recursos/Sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="2_4py50"]
+[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://recursos/Sprites/tileset_metal.png" id="3_ni7c1"]
+[ext_resource type="Texture2D" uid="uid://dkcwkml6f4uog" path="res://recursos/Sprites/charcos de agua 24x24 prototipo Sprite-0001.png" id="4_2g2ra"]
+>>>>>>> 74e04897809409092bb2c34f6aa1d089d9406ab8
 [ext_resource type="PackedScene" uid="uid://dfjh4dt5rfwa8" path="res://Escenas/cambio de zonas/cambio_de_zona_right.tscn" id="5_2enxs"]
 [ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zonas Right/cambio_zona_2_a_1_nivel1.gd" id="6_qlqdr"]
 [ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/niveles/player.tscn" id="7_htdy0"]
 [ext_resource type="PackedScene" uid="uid://btqt662w01j4j" path="res://Escenas/obstaculos/coins.tscn" id="8_lgtej"]
 [ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/obstaculos/vacio.tscn" id="9_kslwg"]
 [ext_resource type="PackedScene" uid="uid://ff3l3otwmdsq" path="res://Escenas/obstaculos/jump_pad.tscn" id="10_tjm7o"]
+<<<<<<< HEAD
 [ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://Recursos/fonts/PixelOperator8-Bold.ttf" id="11_rvnjf"]
 [ext_resource type="PackedScene" uid="uid://chrw7kpvwxbis" path="res://Escenas/cambio de zonas/cambio_de_zona_left.tscn" id="12_ogq6g"]
 [ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zona Left/cambio_zona_2_a_3_nivel1l.gd" id="13_r3mdv"]
 [ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://Recursos/sprites/hearth.png" id="14_24y8y"]
 [ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://Recursos/sprites/Fondo/bg.png" id="15_vln0w"]
 [ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://Recursos/fonts/PixelOperator8.ttf" id="15_xcu2f"]
+=======
+[ext_resource type="FontFile" uid="uid://cbaegd5qdu7yf" path="res://recursos/Fonts/PixelOperator8-Bold.ttf" id="11_rvnjf"]
+[ext_resource type="PackedScene" uid="uid://chrw7kpvwxbis" path="res://Escenas/cambio de zonas/cambio_de_zona_left.tscn" id="12_ogq6g"]
+[ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zona Left/cambio_zona_2_a_3_nivel1l.gd" id="13_r3mdv"]
+[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://recursos/Sprites/hearth.png" id="14_24y8y"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="15_vln0w"]
+[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://recursos/Fonts/PixelOperator8.ttf" id="15_xcu2f"]
+>>>>>>> 74e04897809409092bb2c34f6aa1d089d9406ab8
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x13kc"]
 texture = ExtResource("1_bg6n4")
@@ -267,7 +283,11 @@ position = Vector2(107, 275)
 position = Vector2(-5, -13)
 process_callback = 0
 limit_left = 1
+<<<<<<< HEAD
 limit_right = 840
+=======
+limit_right = 1104
+>>>>>>> 74e04897809409092bb2c34f6aa1d089d9406ab8
 limit_bottom = 342
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
