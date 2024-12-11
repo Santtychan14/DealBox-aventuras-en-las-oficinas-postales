@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b0bcjk0oam8f5"
-path="res://.godot/imported/caminata del papu.MP3-20261794331f8c5907e155948f18178d.mp3str"
+path="res://.godot/imported/caminata del papu.MP3-3551f5725d2b7d6368834235f19035cc.mp3str"
 
 [deps]
 
-source_file="res://recursos/Sounds/caminata del papu.MP3"
-dest_files=["res://.godot/imported/caminata del papu.MP3-20261794331f8c5907e155948f18178d.mp3str"]
+source_file="res://Recursos/sounds/caminata del papu.MP3"
+dest_files=["res://.godot/imported/caminata del papu.MP3-3551f5725d2b7d6368834235f19035cc.mp3str"]
 
 [params]
 

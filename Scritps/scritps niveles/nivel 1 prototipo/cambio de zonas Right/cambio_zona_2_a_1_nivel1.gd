@@ -8,6 +8,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if current_scene != "nivel prototipo":
 		get_tree().change_scene_to_file("res://Escenas/niveles/nivel_prototipo.tscn")
 
-
 func _on_cambio_de_zona_left_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.

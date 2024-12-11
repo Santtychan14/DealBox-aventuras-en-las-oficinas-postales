@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://dntb3svmkkr4f"]
+
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://Recursos/fonts/KiwiSoda.ttf" id="1_1by21"]
+[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://Recursos/fonts/PixelOperator8.ttf" id="1_fwidm"]
+[ext_resource type="Theme" uid="uid://b07mn0ii8l1y" path="res://Shaders/pasar_nivel_theme.tres" id="1_on5h3"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/siguiente.gd" id="4_58akr"]
+[ext_resource type="Script" path="res://Scritps/scritps menus/reiniciar.gd" id="5_piu4t"]
+
+[sub_resource type="GDScript" id="GDScript_wr2nv"]
+script/source = "extends Label
+
+# Define las rutas a las escenas
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xidl"]
+
+[node name="pasar_nivel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.5
+offset_top = -50.5
+offset_right = 77.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_on5h3")
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="GanarPerder" type="Label" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_1by21")
+text = "Monedas Obtenidas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Puntos" type="Label" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_fwidm")
+theme_override_font_sizes/font_size = 11
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = SubResource("GDScript_wr2nv")
+
+[node name="Siguiente" type="Button" parent="PanelContainer/GridContainer"]
+visible = false
+layout_mode = 2
+text = "Siguiente"
+script = ExtResource("4_58akr")
+
+[node name="Reiniciar" type="Button" parent="PanelContainer/GridContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_1by21")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5xidl")
+text = "Reintentar"
+script = ExtResource("5_piu4t")
+
+[connection signal="pressed" from="PanelContainer/GridContainer/Siguiente" to="PanelContainer/GridContainer/Siguiente" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/GridContainer/Reiniciar" to="PanelContainer/GridContainer/Reiniciar" method="_on_pressed"]

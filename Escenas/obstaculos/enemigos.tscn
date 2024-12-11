@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0ipcyotlxng2"]
 
 [ext_resource type="Script" path="res://Scritps/enemigo.gd" id="1_nrjax"]
-[ext_resource type="Texture2D" uid="uid://byojeapujk77x" path="res://recursos/Sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png" id="2_l86yy"]
+[ext_resource type="Texture2D" uid="uid://byojeapujk77x" path="res://Recursos/sprites/boxten prototipo de sprites de 24x24 Sprite-0001.png" id="2_l86yy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72h6j"]
 size = Vector2(12, 11)

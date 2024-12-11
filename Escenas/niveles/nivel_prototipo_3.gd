@@ -1,4 +1,5 @@
-extends Button
+extends Node2D
 
-func _on_pressed() -> void:
+
+func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Escenas/menus/pantalla_inicio.tscn")
