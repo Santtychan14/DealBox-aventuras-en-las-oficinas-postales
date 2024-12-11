@@ -1,11 +1,11 @@
 [gd_resource type="Theme" load_steps=13 format=3 uid="uid://c3w4bot3r237h"]
 
-[ext_resource type="Texture2D" uid="uid://drbvx23g7pg56" path="res://Recursos/sprites/UI/button_normal.png" id="1_7c74y"]
-[ext_resource type="Texture2D" uid="uid://dws20lki43s5b" path="res://Recursos/sprites/UI/button_disabled.png" id="1_758o2"]
-[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://Recursos/fonts/KiwiSoda.ttf" id="1_f3vsl"]
-[ext_resource type="Texture2D" uid="uid://dveio2e17eedq" path="res://Recursos/sprites/UI/button_hover.png" id="2_24hur"]
-[ext_resource type="FontFile" uid="uid://dm4b2kq52i8kt" path="res://Recursos/fonts/m5x7.ttf" id="2_am7xo"]
-[ext_resource type="Texture2D" uid="uid://bxg53oenyqn1t" path="res://Recursos/sprites/UI/button_pressed.png" id="4_j2lhy"]
+[ext_resource type="Texture2D" uid="uid://drbvx23g7pg56" path="res://recursos/Sprites/UI/button_normal.png" id="1_7c74y"]
+[ext_resource type="Texture2D" uid="uid://dws20lki43s5b" path="res://recursos/Sprites/UI/button_disabled.png" id="1_758o2"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="1_f3vsl"]
+[ext_resource type="Texture2D" uid="uid://dveio2e17eedq" path="res://recursos/Sprites/UI/button_hover.png" id="2_24hur"]
+[ext_resource type="FontFile" uid="uid://dm4b2kq52i8kt" path="res://recursos/Fonts/m5x7.ttf" id="2_am7xo"]
+[ext_resource type="Texture2D" uid="uid://bxg53oenyqn1t" path="res://recursos/Sprites/UI/button_pressed.png" id="4_j2lhy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdimi"]
 texture = ExtResource("1_758o2")

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dm4b2kq52i8kt"
-path="res://.godot/imported/m5x7.ttf-1b9fbda13531c490e4fb06bb5ba74690.fontdata"
+path="res://.godot/imported/m5x7.ttf-07c69321fd6bdc4e86ca4f1509b1445c.fontdata"
 
 [deps]
 
-source_file="res://Recursos/fonts/m5x7.ttf"
-dest_files=["res://.godot/imported/m5x7.ttf-1b9fbda13531c490e4fb06bb5ba74690.fontdata"]
+source_file="res://recursos/Fonts/m5x7.ttf"
+dest_files=["res://.godot/imported/m5x7.ttf-07c69321fd6bdc4e86ca4f1509b1445c.fontdata"]
 
 [params]
 

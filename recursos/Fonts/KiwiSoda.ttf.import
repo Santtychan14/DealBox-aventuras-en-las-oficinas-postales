@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://6bhd7tcu13sy"
-path="res://.godot/imported/KiwiSoda.ttf-1a09d18e4e9c0ec5142b117418742543.fontdata"
+path="res://.godot/imported/KiwiSoda.ttf-55b5ea9daef3ca8e9335c64e3fe5b5bc.fontdata"
 
 [deps]
 
-source_file="res://Recursos/fonts/KiwiSoda.ttf"
-dest_files=["res://.godot/imported/KiwiSoda.ttf-1a09d18e4e9c0ec5142b117418742543.fontdata"]
+source_file="res://recursos/Fonts/KiwiSoda.ttf"
+dest_files=["res://.godot/imported/KiwiSoda.ttf-55b5ea9daef3ca8e9335c64e3fe5b5bc.fontdata"]
 
 [params]
 

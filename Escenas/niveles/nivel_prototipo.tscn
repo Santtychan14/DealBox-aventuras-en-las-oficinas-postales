@@ -1,21 +1,24 @@
-[gd_scene load_steps=26 format=4 uid="uid://c5b1rm5qmp74p"]
+[gd_scene load_steps=32 format=4 uid="uid://c5b1rm5qmp74p"]
 
 [ext_resource type="Script" path="res://Escenas/niveles/nivel_prototipo.gd" id="1_88dqn"]
-[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://Recursos/sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="1_g4yi6"]
-[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://Recursos/sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_h2cjc"]
-[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://Recursos/sprites/tileset_metal.png" id="3_633w6"]
+[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://recursos/Sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="1_g4yi6"]
+[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_h2cjc"]
+[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://recursos/Sprites/tileset_metal.png" id="3_633w6"]
 [ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/niveles/player.tscn" id="3_oeo6j"]
 [ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/obstaculos/vacio.tscn" id="4_hyfmq"]
-[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://Recursos/fonts/PixelOperator8.ttf" id="4_nrm3b"]
+[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://recursos/Fonts/PixelOperator8.ttf" id="4_nrm3b"]
 [ext_resource type="PackedScene" uid="uid://chrw7kpvwxbis" path="res://Escenas/cambio de zonas/cambio_de_zona_left.tscn" id="6_8qhj1"]
 [ext_resource type="PackedScene" uid="uid://ff3l3otwmdsq" path="res://Escenas/obstaculos/jump_pad.tscn" id="7_abghd"]
-[ext_resource type="PackedScene" uid="uid://btqt662w01j4j" path="res://Escenas/obstaculos/coins.tscn" id="8_lrnnr"]
 [ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zona Left/cambio_zona_1_a_2_nivel1.gd" id="9_rg8a7"]
 [ext_resource type="PackedScene" uid="uid://b0ipcyotlxng2" path="res://Escenas/obstaculos/enemigos.tscn" id="11_64fai"]
-[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://Recursos/sprites/hearth.png" id="12_0dyx3"]
-[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://Recursos/sprites/Fondo/bg.png" id="13_2156n"]
+[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://recursos/Sprites/hearth.png" id="12_0dyx3"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="13_2156n"]
 [ext_resource type="PackedScene" uid="uid://dntb3svmkkr4f" path="res://Escenas/menus/pasar_nivel.tscn" id="14_1kgqt"]
+[ext_resource type="Theme" uid="uid://c3w4bot3r237h" path="res://Shaders/UI_theme.tres" id="15_tqyrn"]
+[ext_resource type="Script" path="res://pause_menu.gd" id="16_0n8nu"]
 [ext_resource type="PackedScene" uid="uid://ccf8evph4fj53" path="res://Escenas/obstaculos/PowerUp_Uno.tscn" id="16_bpkan"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="17_3mwu1"]
+[ext_resource type="Texture2D" uid="uid://cau1lo1rnhred" path="res://recursos/Sprites/UI/texture.png" id="17_45iy6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24rym"]
 texture = ExtResource("1_g4yi6")
@@ -453,7 +456,7 @@ sources/2 = SubResource("TileSetAtlasSource_k70tk")
 distance = -38.2088
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqqbe"]
-size = Vector2(8.75012, 71)
+size = Vector2(98.9731, 71)
 
 [sub_resource type="GDScript" id="GDScript_g3ntc"]
 script/source = "extends Label
@@ -468,48 +471,51 @@ gradient = SubResource("Gradient_54bo8")
 fill = 1
 fill_from = Vector2(0.529032, 0.483871)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x85ln"]
+bg_color = Color(0, 0, 0, 0.215686)
+
+[sub_resource type="Gradient" id="Gradient_k5w3s"]
+offsets = PackedFloat32Array(0.186813, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7i8lv"]
+gradient = SubResource("Gradient_k5w3s")
+fill = 1
+fill_from = Vector2(0.529032, 0.483871)
+
 [node name="nivel prototipo" type="Node2D"]
 script = ExtResource("1_88dqn")
 
 [node name="tilemap prototipo" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAAAA0AAgAIAAEAAAABAA0AAgAJAAIAAAACAA0AAgAJAAIAAAADAA0AAgAJAAIAAAAEAA0AAgAJAAIAAAAFAA0AAgAJAAIAAAAGAA0AAgAJAAIAAAAHAA0AAgAJAAIAAAAIAA0AAgAJAAIAAAAJAAwAAgAKAAAAAAAJAA0AAgAJAAIAAAAKAA0AAgAJAAIAAAALAA0AAgAJAAIAAAAPAA0AAgAJAAIAAAARAAwAAgAKAAAAAAASAAwAAgAKAAAAAAATAAwAAgAKAAAAAAAUAAwAAgAKAAAAAAAVAA0AAgAJAAIAAAAWAA0AAgAJAAIAAAAXAA0AAgAJAAIAAAAAAAUAAgAAAAEAAAAAAAYAAgAAAAEAAAAAAAcAAgAAAAEAAAAAAAgAAgAAAAEAAAAAAAkAAgAAAAEAAAAAAAoAAgAAAAEAAAAAAAsAAgAAAAEAAAAAAAwAAgAEAAEAAAABAAwAAgAKAAAAAAACAAwAAgAKAAAAAAADAAwAAgAKAAAAAAAEAAwAAgAKAAAAAAAFAAwAAgAKAAAAAAAGAAwAAgAKAAAAAAAHAAwAAgAKAAAAAAAKAAwAAgAKAAAAAAALAAwAAgAKAAAAAAAYAA0AAgAJAAIAAAAZAAwAAgAKAAAAAAAZAA0AAgAJAAIAAAAaAAwAAgAKAAAAAAAaAA0AAgAJAAIAAAAbAAwAAgAKAAAAAAAbAA0AAgAJAAIAAAAcAAwAAgAKAAAAAAAcAA0AAgAJAAIAAAAdAAwAAgAKAAAAAAAdAA0AAgAJAAIAAAAeAAwAAgAKAAAAAAAeAA0AAgAJAAIAAAAfAAwAAgAKAAAAAAAfAA0AAgAJAAIAAAAAAAAAAgABAAAAAAAAAAEAAgAAAAEAAAAAAAIAAgAAAAEAAAAAAAMAAgAAAAEAAAAAAAQAAgAAAAEAAAABAAAAAgACAAMAAAACAAAAAgACAAMAAAADAAAAAgACAAMAAAAEAAAAAgACAAMAAAAFAAAAAgACAAMAAAAGAAAAAgACAAMAAAAHAAAAAgACAAMAAAAIAAAAAgACAAMAAAAJAAAAAgACAAMAAAAKAAAAAgACAAMAAAALAAAAAgACAAMAAAAMAAAAAgACAAMAAAANAAAAAgACAAMAAAAOAAAAAgACAAMAAAAPAAAAAgACAAMAAAAQAAAAAgACAAMAAAARAAAAAgACAAMAAAASAAAAAgACAAMAAAATAAAAAgACAAMAAAAUAAAAAgACAAMAAAAVAAAAAgACAAMAAAAWAAAAAgACAAMAAAAXAAAAAgACAAMAAAAYAAAAAgACAAMAAAAZAAAAAgACAAMAAAAaAAAAAgACAAMAAAAbAAAAAgACAAMAAAAcAAAAAgACAAMAAAAdAAAAAgACAAMAAAAeAAAAAgACAAMAAAAfAAAAAgACAAMAAAAgAAAAAgAFAAAAAAAgAAwAAgAKAAAAAAAgAA0AAgAJAAIAAAAhAAAAAgAKAAAAAAAhAAwAAgAKAAAAAAAhAA0AAgAJAAIAAAAiAAAAAgAGAAAAAAAiAAwAAgAKAAAAAAAiAA0AAgAJAAIAAAAgAAEAAgAIAAEAAAAgAAIAAgAIAAEAAAAgAAMAAgAIAAEAAAAgAAQAAgAIAAEAAAAgAAUAAgAIAAEAAAAgAAYAAgAIAAEAAAAgAAcAAgAIAAEAAAAgAAgAAgAIAAMAAAAhAAEAAgAJAAIAAAAhAAIAAgAJAAIAAAAhAAMAAgAJAAIAAAAhAAQAAgAJAAIAAAAhAAUAAgAJAAIAAAAhAAYAAgAJAAIAAAAhAAcAAgAJAAIAAAAhAAgAAgAJAAMAAAAiAAEAAgALAAIAAAAiAAIAAgALAAIAAAAiAAMAAgALAAIAAAAiAAQAAgALAAIAAAAiAAUAAgALAAIAAAAiAAYAAgALAAIAAAAiAAcAAgALAAIAAAAiAAgAAgAGAAMAAAAIAAwAAgAKAAAAAAAXAAsAAAABAAEAAAAXAAoAAAABAAAAAAAWAAoAAAABAAAAAAAVAAoAAAAAAAAAAAAVAAsAAAAAAAEAAAAWAAsAAAABAAEAAAAYAAoAAAACAAAAAAAYAAsAAAABAAEAAAAZAAsAAAACAAAAAAANAAsAAAABAAEAAAAOAAsAAAABAAEAAAAOAAoAAAACAAAAAAANAAoAAAAAAAAAAAAMAAwAAgAKAAAAAAAMAAsAAAAAAAAAAAAPAAsAAAACAAAAAAANAA0AAgAJAAIAAAAMAA0AAgAJAAIAAAAOAA0AAgAJAAIAAAAQAA0AAgAJAAIAAAARAA0AAgAJAAIAAAASAA0AAgAJAAIAAAATAA0AAgAJAAIAAAAUAA0AAgAJAAIAAAAVAAwAAgAKAAAAAAAWAAwAAgAKAAAAAAAXAAwAAgAKAAAAAAAYAAwAAgAKAAAAAAANAAwAAgAKAAAAAAAOAAwAAgAKAAAAAAAPAAwAAgAKAAAAAAAQAAwAAgAKAAAAAAAjAA0AAgALAAIAAAAiAA4AAgAJAAMAAAAhAA4AAgAJAAMAAAAgAA4AAgAJAAMAAAAfAA4AAgAJAAMAAAAeAA4AAgAJAAMAAAAdAA4AAgAJAAMAAAAcAA4AAgAJAAMAAAAbAA4AAgAJAAMAAAAaAA4AAgAJAAMAAAAZAA4AAgAJAAMAAAAYAA4AAgAJAAMAAAAXAA4AAgAJAAMAAAAWAA4AAgAJAAMAAAAVAA4AAgAJAAMAAAAUAA4AAgAJAAMAAAATAA4AAgAJAAMAAAASAA4AAgAJAAMAAAARAA4AAgAJAAMAAAAQAA4AAgAJAAMAAAAPAA4AAgAJAAMAAAAOAA4AAgAJAAMAAAANAA4AAgAJAAMAAAAMAA4AAgAJAAMAAAALAA4AAgAJAAMAAAAKAA4AAgAJAAMAAAAJAA4AAgAJAAMAAAAIAA4AAgAJAAMAAAAHAA4AAgAJAAMAAAAGAA4AAgAJAAMAAAAFAA4AAgAJAAMAAAAEAA4AAgAJAAMAAAADAA4AAgAJAAMAAAACAA4AAgAJAAMAAAAAAA4AAgAIAAMAAAABAA4AAgAJAAMAAAAjAAgAAgADAAMAAAAjAAwAAgALAAAAAAAjAA4AAgALAAMAAAA=")
+tile_map_data = PackedByteArray("AAAAAA0AAgAIAAEAAAABAA0AAgAJAAIAAAACAA0AAgAJAAIAAAADAA0AAgAJAAIAAAAEAA0AAgAJAAIAAAAFAA0AAgAJAAIAAAAGAA0AAgAJAAIAAAAHAA0AAgAJAAIAAAAIAA0AAgAJAAIAAAAJAAwAAgAKAAAAAAAJAA0AAgAJAAIAAAAKAA0AAgAJAAIAAAALAA0AAgAJAAIAAAAPAA0AAgAJAAIAAAARAAwAAgAKAAAAAAASAAwAAgAKAAAAAAATAAwAAgAKAAAAAAAUAAwAAgAKAAAAAAAVAA0AAgAJAAIAAAAWAA0AAgAJAAIAAAAXAA0AAgAJAAIAAAAAAAUAAgAAAAEAAAAAAAYAAgAAAAEAAAAAAAcAAgAAAAEAAAAAAAgAAgAAAAEAAAAAAAkAAgAAAAEAAAAAAAoAAgAAAAEAAAAAAAsAAgAAAAEAAAAAAAwAAgAEAAEAAAABAAwAAgAKAAAAAAACAAwAAgAKAAAAAAADAAwAAgAKAAAAAAAEAAwAAgAKAAAAAAAFAAwAAgAKAAAAAAAGAAwAAgAKAAAAAAAHAAwAAgAKAAAAAAAKAAwAAgAKAAAAAAALAAwAAgAKAAAAAAAYAA0AAgAJAAIAAAAZAAwAAgAGAAEAAAAZAA0AAgAJAAIAAAAaAAwAAgAKAAAAAAAaAA0AAgAJAAIAAAAbAAwAAgAKAAAAAAAbAA0AAgAJAAIAAAAcAAwAAgAKAAAAAAAcAA0AAgAJAAIAAAAdAAwAAgAKAAAAAAAdAA0AAgAJAAIAAAAeAAwAAgAKAAAAAAAeAA0AAgAJAAIAAAAfAAwAAgAKAAAAAAAfAA0AAgAJAAIAAAAAAAAAAgABAAAAAAAAAAEAAgAAAAEAAAAAAAIAAgAAAAEAAAAAAAMAAgAAAAEAAAAAAAQAAgAAAAEAAAABAAAAAgACAAMAAAACAAAAAgACAAMAAAADAAAAAgACAAMAAAAEAAAAAgACAAMAAAAFAAAAAgACAAMAAAAGAAAAAgACAAMAAAAHAAAAAgACAAMAAAAIAAAAAgACAAMAAAAJAAAAAgACAAMAAAAKAAAAAgACAAMAAAALAAAAAgACAAMAAAAMAAAAAgACAAMAAAANAAAAAgACAAMAAAAOAAAAAgACAAMAAAAPAAAAAgACAAMAAAAQAAAAAgACAAMAAAARAAAAAgACAAMAAAASAAAAAgACAAMAAAATAAAAAgACAAMAAAAUAAAAAgACAAMAAAAVAAAAAgACAAMAAAAWAAAAAgACAAMAAAAXAAAAAgACAAMAAAAYAAAAAgACAAMAAAAZAAAAAgACAAMAAAAaAAAAAgACAAMAAAAbAAAAAgACAAMAAAAcAAAAAgACAAMAAAAdAAAAAgACAAMAAAAeAAAAAgACAAMAAAAfAAAAAgACAAMAAAAgAAAAAgAFAAAAAAAgAAwAAgAKAAAAAAAgAA0AAgAJAAIAAAAhAAAAAgAKAAAAAAAhAAwAAgAKAAAAAAAhAA0AAgAJAAIAAAAiAAAAAgAGAAAAAAAiAAwAAgAKAAAAAAAiAA0AAgAJAAIAAAAgAAEAAgAIAAEAAAAgAAIAAgAIAAEAAAAgAAMAAgAIAAEAAAAgAAQAAgAIAAEAAAAgAAUAAgAIAAEAAAAgAAYAAgAIAAEAAAAgAAcAAgAIAAEAAAAgAAgAAgAIAAMAAAAhAAEAAgAJAAIAAAAhAAIAAgAJAAIAAAAhAAMAAgAJAAIAAAAhAAQAAgAJAAIAAAAhAAUAAgAJAAIAAAAhAAYAAgAJAAIAAAAhAAcAAgAJAAIAAAAhAAgAAgAJAAMAAAAiAAEAAgALAAIAAAAiAAIAAgALAAIAAAAiAAMAAgALAAIAAAAiAAQAAgALAAIAAAAiAAUAAgALAAIAAAAiAAYAAgALAAIAAAAiAAcAAgALAAIAAAAiAAgAAgAGAAMAAAAIAAwAAgAKAAAAAAAXAAsAAgAJAAIAAAAXAAoAAgAKAAAAAAAWAAoAAgAKAAAAAAAVAAoAAgAIAAAAAAAVAAsAAgAIAAEAAAAWAAsAAgAJAAIAAAAYAAoAAgALAAAAAAAYAAsAAgAGAAEAAAAZAAsAAgALAAAAAAANAAsAAgAFAAEAAAAOAAsAAgAGAAEAAAAOAAoAAgALAAAAAAANAAoAAgAIAAAAAAAMAAwAAgAFAAEAAAAMAAsAAgAIAAAAAAAPAAsAAgALAAAAAAANAA0AAgAJAAIAAAAMAA0AAgAJAAIAAAAOAA0AAgAJAAIAAAAQAA0AAgAJAAIAAAARAA0AAgAJAAIAAAASAA0AAgAJAAIAAAATAA0AAgAJAAIAAAAUAA0AAgAJAAIAAAAVAAwAAgAFAAEAAAAWAAwAAgAJAAIAAAAXAAwAAgAJAAIAAAAYAAwAAgAJAAIAAAANAAwAAgAJAAIAAAAOAAwAAgAJAAIAAAAPAAwAAgAGAAEAAAAQAAwAAgAKAAAAAAAjAA0AAgALAAIAAAAiAA4AAgAJAAMAAAAhAA4AAgAJAAMAAAAgAA4AAgAJAAMAAAAfAA4AAgAJAAMAAAAeAA4AAgAJAAMAAAAdAA4AAgAJAAMAAAAcAA4AAgAJAAMAAAAbAA4AAgAJAAMAAAAaAA4AAgAJAAMAAAAZAA4AAgAJAAMAAAAYAA4AAgAJAAMAAAAXAA4AAgAJAAMAAAAWAA4AAgAJAAMAAAAVAA4AAgAJAAMAAAAUAA4AAgAJAAMAAAATAA4AAgAJAAMAAAASAA4AAgAJAAMAAAARAA4AAgAJAAMAAAAQAA4AAgAJAAMAAAAPAA4AAgAJAAMAAAAOAA4AAgAJAAMAAAANAA4AAgAJAAMAAAAMAA4AAgAJAAMAAAALAA4AAgAJAAMAAAAKAA4AAgAJAAMAAAAJAA4AAgAJAAMAAAAIAA4AAgAJAAMAAAAHAA4AAgAJAAMAAAAGAA4AAgAJAAMAAAAFAA4AAgAJAAMAAAAEAA4AAgAJAAMAAAADAA4AAgAJAAMAAAACAA4AAgAJAAMAAAAAAA4AAgAIAAMAAAABAA4AAgAJAAMAAAAjAAgAAgADAAMAAAAjAAwAAgALAAAAAAAjAA4AAgALAAMAAAA=")
 tile_set = SubResource("TileSet_2ym08")
 
 [node name="labels" type="Node2D" parent="."]
 
 [node name="zona1" type="Label" parent="labels"]
-offset_left = 86.0
-offset_top = 180.0
-offset_right = 251.0
-offset_bottom = 211.0
-theme_override_fonts/font = ExtResource("4_nrm3b")
-theme_override_font_sizes/font_size = 30
+modulate = Color(0.0117647, 0.0980392, 0.247059, 0.564706)
+offset_left = 87.0
+offset_top = 190.0
+offset_right = 252.0
+offset_bottom = 221.0
+theme_override_fonts/font = ExtResource("17_3mwu1")
 text = "Zona 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="siguir" type="Label" parent="labels"]
+[node name="seguir" type="Label" parent="labels"]
 offset_left = 700.0
 offset_top = 243.0
 offset_right = 740.0
 offset_bottom = 278.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("17_3mwu1")
 text = "=>"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Player" parent="." instance=ExtResource("3_oeo6j")]
 position = Vector2(62, 276)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-5, -13)
-process_callback = 0
-limit_left = 1
-limit_right = 840
-limit_bottom = 342
-position_smoothing_enabled = true
-position_smoothing_speed = 7.0
-
-[node name="shake_timer" type="Timer" parent="Player/Camera2D"]
-wait_time = 0.2
-one_shot = true
 
 [node name="vacio" parent="." instance=ExtResource("4_hyfmq")]
 position = Vector2(-19.2059, 207.791)
@@ -521,21 +527,13 @@ shape = SubResource("WorldBoundaryShape2D_hm4jr")
 [node name="Jump pad" parent="." instance=ExtResource("7_abghd")]
 position = Vector2(493, 276)
 
-[node name="Cambio de zona left" parent="." instance=ExtResource("6_8qhj1")]
-position = Vector2(791.973, 263.191)
+[node name="zone_change" parent="." instance=ExtResource("6_8qhj1")]
+position = Vector2(708, 263)
 script = ExtResource("9_rg8a7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cambio de zona left"]
-position = Vector2(66.402, -11.191)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zone_change"]
+position = Vector2(111.513, -11.191)
 shape = SubResource("RectangleShape2D_mqqbe")
-
-[node name="Coins" type="Node2D" parent="."]
-
-[node name="Coin" parent="Coins" instance=ExtResource("8_lrnnr")]
-position = Vector2(131, 281)
-
-[node name="Coin1" parent="Coins" instance=ExtResource("8_lrnnr")]
-position = Vector2(556, 229)
 
 [node name="Enemigo" parent="." instance=ExtResource("11_64fai")]
 position = Vector2(150, 279)
@@ -543,10 +541,11 @@ position = Vector2(150, 279)
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="empty_hearths" type="TextureRect" parent="UI"]
-visible = false
 modulate = Color(0.122252, 0.122252, 0.122252, 1)
-offset_right = 14.0
-offset_bottom = 14.0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 57.0
+offset_bottom = 19.0
 size_flags_horizontal = 3
 texture = ExtResource("12_0dyx3")
 stretch_mode = 1
@@ -555,8 +554,10 @@ stretch_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -10.0
-offset_bottom = 23.0
+offset_left = -17.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 19.0
 grow_horizontal = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -566,8 +567,10 @@ text = "0"
 script = SubResource("GDScript_g3ntc")
 
 [node name="hearths" type="TextureRect" parent="UI"]
-offset_right = 42.0
-offset_bottom = 14.0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 57.0
+offset_bottom = 19.0
 size_flags_horizontal = 3
 texture = ExtResource("12_0dyx3")
 expand_mode = 1
@@ -582,16 +585,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_k6e6x")
 
-[node name="Button" type="Button" parent="UI"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -46.5
-offset_right = 46.5
-offset_bottom = 31.0
-grow_horizontal = 2
-text = "Salir"
-
 [node name="pasar_nivel" parent="UI" instance=ExtResource("14_1kgqt")]
 visible = false
 anchors_preset = 8
@@ -599,6 +592,95 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+
+[node name="pause_menu" type="Panel" parent="UI"]
+process_mode = 3
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -180.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("15_tqyrn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x85ln")
+script = ExtResource("16_0n8nu")
+
+[node name="vignette" type="TextureRect" parent="UI/pause_menu"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_7i8lv")
+
+[node name="vignette2" type="TextureRect" parent="UI/pause_menu/vignette"]
+modulate = Color(1, 1, 1, 0.0156863)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_45iy6")
+
+[node name="margin" type="MarginContainer" parent="UI/pause_menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="container" type="VBoxContainer" parent="UI/pause_menu/margin"]
+layout_mode = 2
+alignment = 1
+
+[node name="title" type="Label" parent="UI/pause_menu/margin/container"]
+modulate = Color(1, 1, 1, 0.623529)
+custom_minimum_size = Vector2(0, 36.185)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_3mwu1")
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resume" type="Button" parent="UI/pause_menu/margin/container"]
+custom_minimum_size = Vector2(88.815, 27.22)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.647059, 0.301961, 0.290196, 1)
+theme_override_fonts/font = ExtResource("17_3mwu1")
+text = "Resume"
+icon_alignment = 1
+
+[node name="settings" type="Button" parent="UI/pause_menu/margin/container"]
+custom_minimum_size = Vector2(88.815, 27.22)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.647059, 0.301961, 0.290196, 1)
+theme_override_fonts/font = ExtResource("17_3mwu1")
+text = "Settings"
+icon_alignment = 1
+
+[node name="exit" type="Button" parent="UI/pause_menu/margin/container"]
+custom_minimum_size = Vector2(88.815, 27.22)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.647059, 0.301961, 0.290196, 1)
+theme_override_fonts/font = ExtResource("17_3mwu1")
+text = "Exit"
+icon_alignment = 1
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -612,8 +694,21 @@ offset_bottom = 361.0
 texture = ExtResource("13_2156n")
 stretch_mode = 1
 
-[node name="Area2D" parent="." instance=ExtResource("16_bpkan")]
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/bg/TextureRect"]
+modulate = Color(1, 1, 1, 0.0156863)
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 0
+offset_right = 863.0
+offset_bottom = 361.0
+texture = ExtResource("17_45iy6")
+stretch_mode = 1
+
+[node name="letter" parent="." instance=ExtResource("16_bpkan")]
 position = Vector2(220, 278)
 
-[connection signal="body_entered" from="Cambio de zona left" to="Cambio de zona left" method="_on_body_entered"]
-[connection signal="pressed" from="UI/Button" to="." method="_on_button_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="body_entered" from="zone_change" to="zone_change" method="_on_body_entered"]
+[connection signal="pressed" from="UI/pause_menu/margin/container/resume" to="UI/pause_menu" method="_on_resume_pressed"]
+[connection signal="pressed" from="UI/pause_menu/margin/container/settings" to="UI/pause_menu" method="_on_settings_pressed"]
+[connection signal="pressed" from="UI/pause_menu/margin/container/exit" to="UI/pause_menu" method="_on_exit_pressed"]

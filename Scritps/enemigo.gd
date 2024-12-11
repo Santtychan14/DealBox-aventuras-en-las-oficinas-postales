@@ -14,7 +14,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		body.life -= 1
 		body.lose_hearth()
 	speed = 0
 	await get_tree().create_timer(0.5).timeout
