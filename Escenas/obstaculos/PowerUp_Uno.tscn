@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scritps/power_up_uno.gd" id="1_566d2"]
 [ext_resource type="Shader" path="res://float.gdshader" id="1_hjeh6"]
-[ext_resource type="Texture2D" uid="uid://coaiclrlsxsiw" path="res://recursos/Sprites/UI/letter_collectable.png" id="2_kaem2"]
+[ext_resource type="Texture2D" uid="uid://coaiclrlsxsiw" path="res://Recursos/sprites/UI/letter_collectable.png" id="2_kaem2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_230ph"]
 shader = ExtResource("1_hjeh6")

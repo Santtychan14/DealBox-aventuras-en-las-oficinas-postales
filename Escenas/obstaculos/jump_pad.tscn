@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://ff3l3otwmdsq"]
 
 [ext_resource type="Script" path="res://Scritps/jump_pad.gd" id="1_5xpae"]
-[ext_resource type="Texture2D" uid="uid://d2e2ibknpq2pu" path="res://recursos/Sprites/jump pad prototipo v 1 Sprite-0001-Sheet.png" id="1_ldvth"]
-[ext_resource type="AudioStream" uid="uid://dc8jpqd8hu0u8" path="res://recursos/Sounds/jump_comp.wav" id="3_kuki7"]
+[ext_resource type="Texture2D" uid="uid://d2e2ibknpq2pu" path="res://Recursos/sprites/jump pad prototipo v 1 Sprite-0001-Sheet.png" id="1_ldvth"]
+[ext_resource type="AudioStream" uid="uid://dc8jpqd8hu0u8" path="res://Recursos/sounds/jump_comp.wav" id="3_kuki7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvv3c"]
 atlas = ExtResource("1_ldvth")

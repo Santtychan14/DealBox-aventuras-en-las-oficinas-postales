@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cogbdpj2k7t6o"
-path="res://.godot/imported/substract.wav-fad1053bd7b2918979ab7a900301db84.sample"
+path="res://.godot/imported/substract.wav-93673965a3c43cf3c3a4b8b143b7f747.sample"
 
 [deps]
 
-source_file="res://recursos/Sounds/substract.wav"
-dest_files=["res://.godot/imported/substract.wav-fad1053bd7b2918979ab7a900301db84.sample"]
+source_file="res://Recursos/sounds/substract.wav"
+dest_files=["res://.godot/imported/substract.wav-93673965a3c43cf3c3a4b8b143b7f747.sample"]
 
 [params]
 

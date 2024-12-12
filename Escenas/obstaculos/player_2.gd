@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 			velocity += get_gravity() * delta
 
 		#Movimiento
-		var direction := Input.get_axis("ui_left", "ui_right")
+		var direction := Input.get_axis("Left2", "Right2 ")
 		if direction:
 			velocity.x = direction * SPEED
 			if not animated_sprite_2d.is_playing():
@@ -106,5 +106,3 @@ func win():
 	$"../UI/pasar_nivel".show()
 	animated_sprite_2d.play("win")
 	$win.play()
-
-	

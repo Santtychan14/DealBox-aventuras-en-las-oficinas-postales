@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bdrwibvr87r6k"
-path="res://.godot/imported/hitHurt (1).wav-ca42f28287e273b77124a63f00640dfa.sample"
+path="res://.godot/imported/hitHurt (1).wav-c22fb7d52bdd846de37c1f8c604b7a29.sample"
 
 [deps]
 
-source_file="res://recursos/Sounds/hitHurt (1).wav"
-dest_files=["res://.godot/imported/hitHurt (1).wav-ca42f28287e273b77124a63f00640dfa.sample"]
+source_file="res://Recursos/sounds/hitHurt (1).wav"
+dest_files=["res://.godot/imported/hitHurt (1).wav-c22fb7d52bdd846de37c1f8c604b7a29.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://coaiclrlsxsiw"
-path="res://.godot/imported/letter_collectable.png-c2d2de8a5e5921e44a7d722cf04e1175.ctex"
+path="res://.godot/imported/letter_collectable.png-51e331e9ba08d75372bfd1cb1873b806.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/Sprites/UI/letter_collectable.png"
-dest_files=["res://.godot/imported/letter_collectable.png-c2d2de8a5e5921e44a7d722cf04e1175.ctex"]
+source_file="res://Recursos/sprites/UI/letter_collectable.png"
+dest_files=["res://.godot/imported/letter_collectable.png-51e331e9ba08d75372bfd1cb1873b806.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cso67titern00"
-path="res://.godot/imported/tileset_metal.png-ec3e0dca12184f5757a3f2c2c955fec3.ctex"
+path="res://.godot/imported/tileset_metal.png-970771af7ffcaad8d578cbb8ed52ecdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/Sprites/tileset_metal.png"
-dest_files=["res://.godot/imported/tileset_metal.png-ec3e0dca12184f5757a3f2c2c955fec3.ctex"]
+source_file="res://Recursos/sprites/tileset_metal.png"
+dest_files=["res://.godot/imported/tileset_metal.png-970771af7ffcaad8d578cbb8ed52ecdc.ctex"]
 
 [params]
 

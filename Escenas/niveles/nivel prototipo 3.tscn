@@ -1,17 +1,17 @@
-[gd_scene load_steps=24 format=4 uid="uid://basy2y520hiom"]
+[gd_scene load_steps=23 format=4 uid="uid://basy2y520hiom"]
 
 [ext_resource type="Script" path="res://Escenas/niveles/nivel_prototipo_3.gd" id="1_kx86m"]
 [ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/obstaculos/vacio.tscn" id="1_nsox7"]
-[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_1jbxp"]
-[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://recursos/Sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="3_gvcuk"]
-[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://recursos/Sprites/tileset_metal.png" id="4_0ahni"]
-[ext_resource type="Texture2D" uid="uid://dkcwkml6f4uog" path="res://recursos/Sprites/charcos de agua 24x24 prototipo Sprite-0001.png" id="5_11loq"]
+[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://Recursos/sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_1jbxp"]
+[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://Recursos/sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="3_gvcuk"]
+[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://Recursos/sprites/tileset_metal.png" id="4_0ahni"]
+[ext_resource type="Texture2D" uid="uid://dkcwkml6f4uog" path="res://Recursos/sprites/charcos de agua 24x24 prototipo Sprite-0001.png" id="5_11loq"]
 [ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/niveles/player.tscn" id="6_718w6"]
 [ext_resource type="PackedScene" uid="uid://dfjh4dt5rfwa8" path="res://Escenas/cambio de zonas/cambio_de_zona_right.tscn" id="7_btjoa"]
 [ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zonas Right/cambio_zona_3_a_2_nivel1.gd" id="8_xpoc4"]
-[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://recursos/Sprites/hearth.png" id="9_aoh8b"]
-[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="10_c4m16"]
-[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://recursos/Fonts/PixelOperator8.ttf" id="10_ki1tw"]
+[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://Recursos/sprites/hearth.png" id="9_aoh8b"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://Recursos/sprites/Fondo/bg.png" id="10_c4m16"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://Recursos/fonts/KiwiSoda.ttf" id="12_sy00g"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1xh0q"]
 
@@ -230,10 +230,6 @@ sources/0 = SubResource("TileSetAtlasSource_opfoo")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ia23g"]
 size = Vector2(7, 71)
 
-[sub_resource type="GDScript" id="GDScript_hyb61"]
-script/source = "extends Label
-"
-
 [node name="nivel prototipo 3" type="Node2D"]
 script = ExtResource("1_kx86m")
 
@@ -258,6 +254,7 @@ tile_set = SubResource("TileSet_dk3m1")
 
 [node name="Player" parent="." instance=ExtResource("6_718w6")]
 position = Vector2(10, 276)
+rotation = 6.28319
 
 [node name="Cambio de zona Right" parent="." instance=ExtResource("7_btjoa")]
 position = Vector2(-13.3724, 256.255)
@@ -270,35 +267,20 @@ shape = SubResource("RectangleShape2D_ia23g")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="empty_hearths" type="TextureRect" parent="UI"]
-visible = false
 modulate = Color(0.122252, 0.122252, 0.122252, 1)
-offset_right = 14.0
+offset_right = 47.0
 offset_bottom = 14.0
 size_flags_horizontal = 3
 texture = ExtResource("9_aoh8b")
 stretch_mode = 1
 
 [node name="hearths" type="TextureRect" parent="UI"]
-offset_right = 42.0
+offset_right = 47.0
 offset_bottom = 14.0
 size_flags_horizontal = 3
 texture = ExtResource("9_aoh8b")
 expand_mode = 1
 stretch_mode = 1
-
-[node name="Puntos" type="Label" parent="UI"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -10.0
-offset_bottom = 23.0
-grow_horizontal = 0
-size_flags_horizontal = 3
-size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("10_ki1tw")
-theme_override_font_sizes/font_size = 11
-text = "0"
-script = SubResource("GDScript_hyb61")
 
 [node name="Button" type="Button" parent="UI"]
 anchors_preset = 5
@@ -322,5 +304,30 @@ offset_bottom = 361.0
 texture = ExtResource("10_c4m16")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="labels" type="Node2D" parent="."]
+
+[node name="zona1" type="Label" parent="labels"]
+modulate = Color(0.0117647, 0.0980392, 0.247059, 0.564706)
+offset_left = 87.0
+offset_top = 190.0
+offset_right = 252.0
+offset_bottom = 221.0
+theme_override_fonts/font = ExtResource("12_sy00g")
+text = "Zona 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="seguir" type="Label" parent="labels"]
+visible = false
+offset_left = 700.0
+offset_top = 243.0
+offset_right = 740.0
+offset_bottom = 278.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_sy00g")
+text = "=>"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="UI/Button" to="." method="_on_button_pressed"]

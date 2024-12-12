@@ -1,24 +1,23 @@
-[gd_scene load_steps=32 format=4 uid="uid://c5b1rm5qmp74p"]
+[gd_scene load_steps=30 format=4 uid="uid://c5b1rm5qmp74p"]
 
 [ext_resource type="Script" path="res://Escenas/niveles/nivel_prototipo.gd" id="1_88dqn"]
-[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://recursos/Sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="1_g4yi6"]
-[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://recursos/Sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_h2cjc"]
-[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://recursos/Sprites/tileset_metal.png" id="3_633w6"]
+[ext_resource type="Texture2D" uid="uid://bmo83idoyck6x" path="res://Recursos/sprites/tileset de prototipo 24x24 pixeles Sprite-0001.png" id="1_g4yi6"]
+[ext_resource type="Texture2D" uid="uid://dvc03ng6q8rbp" path="res://Recursos/sprites/platform pequeña prototipo v 1 Sprite-0001.png" id="2_h2cjc"]
+[ext_resource type="Texture2D" uid="uid://cso67titern00" path="res://Recursos/sprites/tileset_metal.png" id="3_633w6"]
 [ext_resource type="PackedScene" uid="uid://b00kdafgm2g4j" path="res://Escenas/niveles/player.tscn" id="3_oeo6j"]
 [ext_resource type="PackedScene" uid="uid://d2bam84anjrdi" path="res://Escenas/obstaculos/vacio.tscn" id="4_hyfmq"]
-[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://recursos/Fonts/PixelOperator8.ttf" id="4_nrm3b"]
 [ext_resource type="PackedScene" uid="uid://chrw7kpvwxbis" path="res://Escenas/cambio de zonas/cambio_de_zona_left.tscn" id="6_8qhj1"]
 [ext_resource type="PackedScene" uid="uid://ff3l3otwmdsq" path="res://Escenas/obstaculos/jump_pad.tscn" id="7_abghd"]
 [ext_resource type="Script" path="res://Scritps/scritps niveles/nivel 1 prototipo/cambio de zona Left/cambio_zona_1_a_2_nivel1.gd" id="9_rg8a7"]
 [ext_resource type="PackedScene" uid="uid://b0ipcyotlxng2" path="res://Escenas/obstaculos/enemigos.tscn" id="11_64fai"]
-[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://recursos/Sprites/hearth.png" id="12_0dyx3"]
-[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://recursos/Sprites/Fondo/bg.png" id="13_2156n"]
+[ext_resource type="Texture2D" uid="uid://de833w5gsvv" path="res://Recursos/sprites/hearth.png" id="12_0dyx3"]
+[ext_resource type="Texture2D" uid="uid://sei3epvrlc0j" path="res://Recursos/sprites/Fondo/bg.png" id="13_2156n"]
 [ext_resource type="PackedScene" uid="uid://dntb3svmkkr4f" path="res://Escenas/menus/pasar_nivel.tscn" id="14_1kgqt"]
 [ext_resource type="Theme" uid="uid://c3w4bot3r237h" path="res://Shaders/UI_theme.tres" id="15_tqyrn"]
 [ext_resource type="Script" path="res://pause_menu.gd" id="16_0n8nu"]
 [ext_resource type="PackedScene" uid="uid://ccf8evph4fj53" path="res://Escenas/obstaculos/PowerUp_Uno.tscn" id="16_bpkan"]
-[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="17_3mwu1"]
-[ext_resource type="Texture2D" uid="uid://cau1lo1rnhred" path="res://recursos/Sprites/UI/texture.png" id="17_45iy6"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://Recursos/fonts/KiwiSoda.ttf" id="17_3mwu1"]
+[ext_resource type="Texture2D" uid="uid://cau1lo1rnhred" path="res://Recursos/sprites/UI/texture.png" id="17_45iy6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24rym"]
 texture = ExtResource("1_g4yi6")
@@ -458,10 +457,6 @@ distance = -38.2088
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqqbe"]
 size = Vector2(98.9731, 71)
 
-[sub_resource type="GDScript" id="GDScript_g3ntc"]
-script/source = "extends Label
-"
-
 [sub_resource type="Gradient" id="Gradient_54bo8"]
 offsets = PackedFloat32Array(0.505495, 1)
 colors = PackedColorArray(1, 0, 0, 0, 0.765711, 0, 0.0698584, 1)
@@ -549,22 +544,6 @@ offset_bottom = 19.0
 size_flags_horizontal = 3
 texture = ExtResource("12_0dyx3")
 stretch_mode = 1
-
-[node name="Puntos" type="Label" parent="UI"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -17.0
-offset_top = 7.0
-offset_right = -7.0
-offset_bottom = 19.0
-grow_horizontal = 0
-size_flags_horizontal = 3
-size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("4_nrm3b")
-theme_override_font_sizes/font_size = 11
-text = "0"
-script = SubResource("GDScript_g3ntc")
 
 [node name="hearths" type="TextureRect" parent="UI"]
 offset_left = 6.0
