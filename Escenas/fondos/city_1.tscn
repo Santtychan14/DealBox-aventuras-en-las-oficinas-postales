@@ -1,0 +1,146 @@
+[gd_scene load_steps=13 format=3 uid="uid://nuloa477kjvb"]
+
+[ext_resource type="Script" path="res://bg1.gd" id="1_ti0hy"]
+[ext_resource type="Texture2D" uid="uid://c8jgxyjtkrrdd" path="res://recursos/Sprites/fondos/city1/gradient_night.tres" id="2_ugopy"]
+[ext_resource type="Texture2D" uid="uid://dvywcao4mexij" path="res://recursos/Sprites/fondos/city1/bg_front.png" id="3_odrt1"]
+[ext_resource type="Texture2D" uid="uid://dq4uu6micyhhh" path="res://recursos/Sprites/fondos/city1/bg_top.png" id="4_btrvu"]
+[ext_resource type="Texture2D" uid="uid://b8fb538qqiroj" path="res://recursos/Sprites/fondos/city1/street.png" id="5_cliq0"]
+[ext_resource type="Texture2D" uid="uid://b2ko7blotue3j" path="res://recursos/Sprites/fondos/city1/sidewalk_bg_front.png" id="6_d78kr"]
+[ext_resource type="Texture2D" uid="uid://dcde0ypymos6r" path="res://recursos/Sprites/fondos/city1/sidewalk_bg_top.png" id="7_5bmd3"]
+[ext_resource type="Texture2D" uid="uid://cw1iitx8fhr5n" path="res://recursos/Sprites/fondos/city1/sidewalk_lights.png" id="8_jlyip"]
+[ext_resource type="Texture2D" uid="uid://qamey4wabco6" path="res://recursos/Sprites/fondos/city1/sidewalk_lights_light.png" id="9_v7fnq"]
+[ext_resource type="Texture2D" uid="uid://2hvwo3penu5x" path="res://recursos/Sprites/fondos/city1/front.png" id="10_oo0mr"]
+
+[sub_resource type="Gradient" id="Gradient_3yo8o"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.0431373, 0.341176, 0.223529)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_okwer"]
+gradient = SubResource("Gradient_3yo8o")
+fill_from = Vector2(1, 1)
+
+[node name="city_1" type="ParallaxBackground"]
+script = ExtResource("1_ti0hy")
+
+[node name="sky" type="ParallaxLayer" parent="."]
+position = Vector2(0, -101)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(320, 0)
+
+[node name="TextureRect2" type="TextureRect" parent="sky"]
+offset_left = -1.0
+offset_top = 37.0
+offset_right = 319.0
+offset_bottom = 217.0
+texture = ExtResource("2_ugopy")
+metadata/_edit_use_anchors_ = true
+
+[node name="bg" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.68, 0.68)
+motion_mirroring = Vector2(320, 0)
+
+[node name="bg_front" type="TextureRect" parent="bg"]
+offset_top = 34.0
+offset_right = 320.0
+offset_bottom = 35.0
+scale = Vector2(1, 87)
+pivot_offset = Vector2(0, 1)
+texture = ExtResource("3_odrt1")
+expand_mode = 1
+
+[node name="bg_top" type="TextureRect" parent="bg"]
+offset_top = -53.0
+offset_right = 320.0
+offset_bottom = -52.0
+scale = Vector2(1, 5)
+pivot_offset = Vector2(0, 1)
+texture = ExtResource("4_btrvu")
+expand_mode = 1
+
+[node name="street" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.85, 0.85)
+motion_mirroring = Vector2(320, 0)
+
+[node name="street" type="TextureRect" parent="street"]
+offset_top = 86.0
+offset_right = 320.0
+offset_bottom = 87.0
+scale = Vector2(1, 59)
+pivot_offset = Vector2(0, 1)
+texture = ExtResource("5_cliq0")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="sidewalk_bg" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(320, 0)
+
+[node name="sidewalk_front" type="TextureRect" parent="sidewalk_bg"]
+offset_top = 41.0
+offset_right = 320.0
+offset_bottom = 42.0
+scale = Vector2(1, 3)
+texture = ExtResource("6_d78kr")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="sidewalk_top" type="TextureRect" parent="sidewalk_bg"]
+offset_top = 41.0
+offset_right = 320.0
+offset_bottom = 42.0
+scale = Vector2(1, 11)
+pivot_offset = Vector2(0, 1)
+texture = ExtResource("7_5bmd3")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="sidewalk_top2" type="TextureRect" parent="sidewalk_bg"]
+offset_left = 71.0
+offset_top = -30.0
+offset_right = 253.0
+offset_bottom = 40.0
+pivot_offset = Vector2(0, 1)
+texture = ExtResource("8_jlyip")
+expand_mode = 1
+
+[node name="sidewalk_top3" type="TextureRect" parent="sidewalk_bg"]
+modulate = Color(1, 1, 1, 0.0941176)
+offset_left = 71.0
+offset_top = -30.0
+offset_right = 253.0
+offset_bottom = 40.0
+pivot_offset = Vector2(0, 1)
+texture = ExtResource("9_v7fnq")
+expand_mode = 1
+
+[node name="front" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(320, 0)
+
+[node name="front" type="TextureRect" parent="front"]
+offset_top = 95.0
+offset_right = 320.0
+offset_bottom = 96.0
+scale = Vector2(1, 20)
+pivot_offset = Vector2(0, 1)
+texture = ExtResource("10_oo0mr")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="overlay" type="ParallaxLayer" parent="."]
+position = Vector2(0, -46)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(320, 0)
+
+[node name="TextureRect" type="TextureRect" parent="overlay"]
+modulate = Color(1, 1, 1, 0.588235)
+custom_minimum_size = Vector2(320, 180)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 44.0
+offset_right = 320.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_okwer")

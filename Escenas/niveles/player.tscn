@@ -302,12 +302,7 @@ collision_layer = 3
 script = ExtResource("1_oenvx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-5, -13)
 process_callback = 0
-limit_left = 1
-limit_right = 840
-limit_bottom = 342
-position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
 [node name="shake_timer" type="Timer" parent="Camera2D"]

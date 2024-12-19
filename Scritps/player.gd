@@ -17,6 +17,7 @@ var puntuaje = 0
 var dead = false
 
 func _physics_process(delta: float) -> void:
+	print(camera_2d.global_position)
 	if not shake_timer.is_stopped():
 		camera_2d.offset.x = randf_range(0.1,powerr)
 		camera_2d.offset.y = randf_range(0.1,powerr)
@@ -42,7 +43,10 @@ func _physics_process(delta: float) -> void:
 			if not animated_sprite_2d.is_playing():
 				animated_sprite_2d.play("walk")
 		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
+			if velocity.x < 5 or velocity.x > -5:
+				velocity.x -= velocity.x / 5
+			else: 
+				velocity.x = move_toward(velocity.x, 0, SPEED)
 			if not animated_sprite_2d.is_playing():
 				animated_sprite_2d.play("idle")
 		if direction > 0:

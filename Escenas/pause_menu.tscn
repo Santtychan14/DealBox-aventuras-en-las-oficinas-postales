@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhlssf1s10fh4"]
+
+[ext_resource type="Theme" uid="uid://c3w4bot3r237h" path="res://Shaders/UI_theme.tres" id="1_dtv2k"]
+[ext_resource type="Script" path="res://pause_menu.gd" id="2_k71gd"]
+[ext_resource type="Texture2D" uid="uid://cau1lo1rnhred" path="res://recursos/Sprites/UI/texture.png" id="3_6njol"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="4_mblxa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x85ln"]
+bg_color = Color(0, 0, 0, 0.215686)
+
+[sub_resource type="Gradient" id="Gradient_k5w3s"]
+offsets = PackedFloat32Array(0.186813, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7i8lv"]
+gradient = SubResource("Gradient_k5w3s")
+fill = 1
+fill_from = Vector2(0.529032, 0.483871)
+
+[node name="pause_menu" type="Panel"]
+process_mode = 3
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -180.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_dtv2k")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x85ln")
+script = ExtResource("2_k71gd")
+
+[node name="vignette" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_7i8lv")
+
+[node name="vignette2" type="TextureRect" parent="vignette"]
+modulate = Color(1, 1, 1, 0.0156863)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_6njol")
+
+[node name="margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="container" type="VBoxContainer" parent="margin"]
+layout_mode = 2
+alignment = 1
+
+[node name="title" type="Label" parent="margin/container"]
+modulate = Color(1, 1, 1, 0.623529)
+custom_minimum_size = Vector2(0, 36.185)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mblxa")
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resume" type="Button" parent="margin/container"]
+custom_minimum_size = Vector2(88.815, 27.22)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.647059, 0.301961, 0.290196, 1)
+theme_override_fonts/font = ExtResource("4_mblxa")
+text = "Resume"
+icon_alignment = 1
+
+[node name="settings" type="Button" parent="margin/container"]
+custom_minimum_size = Vector2(88.815, 27.22)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.647059, 0.301961, 0.290196, 1)
+theme_override_fonts/font = ExtResource("4_mblxa")
+text = "Settings"
+icon_alignment = 1
+
+[node name="exit" type="Button" parent="margin/container"]
+custom_minimum_size = Vector2(88.815, 27.22)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.647059, 0.301961, 0.290196, 1)
+theme_override_fonts/font = ExtResource("4_mblxa")
+text = "Exit"
+icon_alignment = 1
+
+[connection signal="pressed" from="margin/container/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="margin/container/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="margin/container/exit" to="." method="_on_exit_pressed"]
