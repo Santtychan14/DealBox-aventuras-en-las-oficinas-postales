@@ -15,7 +15,10 @@ var puntuaje = 0
 @onready var timer: Timer = $"../Area2D/Timer"
 @onready var die: AudioStreamPlayer = $die
 var dead = false
-
+var maxjump = 2
+var salto = 0
+var suelo = true
+var doblesalto = 200
 func _physics_process(delta: float) -> void:
 	print(camera_2d.global_position)
 	if not shake_timer.is_stopped():
@@ -56,9 +59,9 @@ func _physics_process(delta: float) -> void:
 			
 		if Input.is_action_pressed("Shift"):
 			if  direction > 0:
-				velocity.x += 100
+				velocity.x 
 			elif direction <0:
-				velocity.x += -100
+				velocity.x 
 			
 		move_and_slide()
 
@@ -79,11 +82,10 @@ func lose_all_hearth():
 	animated_sprite_2d.play("game_over")
 #	Aqui deberia ir tambien un damage_vignette pero de color azul diria yo, agregalo oink55 
 
-#Sistema de Puntos
-func puntos():
-	puntuaje += 1
-	$"../UI/Puntos".text = str(puntuaje)
-	pickup.play()
+#func puntos():
+#	puntuaje += 1
+#	$"../UI/Puntos".text = str(puntuaje)
+#	pickup.play()
 	
 # voy a a hacer que cuando toque el enemigo se mueva un poco la camara, para mas feedback
 func camera_shake(timer, power):
@@ -99,10 +101,13 @@ func damage_vignette():
 #PowerUp Uno
 func poweruno():
 	pickup.play()
+	puntuaje += 1
 	$"../UI/hearths".size.x += 17
 	$"../UI/empty_hearths".size.x += 17
 	
 func win():
+	
+	#$"../UI/pasar_nivel".show()
 	animated_sprite_2d.play("win")
 	$win.play()
 

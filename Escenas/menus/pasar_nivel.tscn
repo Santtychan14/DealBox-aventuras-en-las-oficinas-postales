@@ -1,15 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://dntb3svmkkr4f"]
 
-[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://Recursos/fonts/KiwiSoda.ttf" id="1_1by21"]
-[ext_resource type="FontFile" uid="uid://dwom63aydpes1" path="res://Recursos/fonts/PixelOperator8.ttf" id="1_fwidm"]
+[ext_resource type="FontFile" uid="uid://6bhd7tcu13sy" path="res://recursos/Fonts/KiwiSoda.ttf" id="1_1by21"]
 [ext_resource type="Theme" uid="uid://b07mn0ii8l1y" path="res://Shaders/pasar_nivel_theme.tres" id="1_on5h3"]
+[ext_resource type="FontFile" uid="uid://dm4b2kq52i8kt" path="res://recursos/Fonts/m5x7.ttf" id="3_t0l5c"]
 [ext_resource type="Script" path="res://Scritps/scritps menus/siguiente.gd" id="4_58akr"]
 [ext_resource type="Script" path="res://Scritps/scritps menus/reiniciar.gd" id="5_piu4t"]
 
 [sub_resource type="GDScript" id="GDScript_wr2nv"]
 script/source = "extends Label
-
-# Define las rutas a las escenas
 "
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xidl"]
@@ -22,8 +20,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -49,7 +45,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PanelContainer/GridContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_1by21")
-text = "Monedas Obtenidas"
+text = "Cartas Obtenidas"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -57,8 +53,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("1_fwidm")
-theme_override_font_sizes/font_size = 11
+theme_override_fonts/font = ExtResource("3_t0l5c")
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
